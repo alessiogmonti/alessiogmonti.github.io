@@ -63,11 +63,11 @@ function draw() {
     push();
     for (let i = 0; i < 80; i++) {
       translate(
-        tan(frameCount * 0.001 + j),
+        tan(frameCount * 0.001 + j) *50,
         i * 0.1
       );
       translate(
-        tan(frameCount * 0.001 + j),
+        tan(frameCount * 0.001 + j) *50,
         i * 0.1
       );
       rotateX(frameCount * 0.005);
