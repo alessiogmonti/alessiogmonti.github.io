@@ -61,13 +61,13 @@ function draw() {
   colSet();
   for (let j = 0; j < 2; j++) {
     push();
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 80; i++) {
       translate(
-        sin(frameCount * 0.001 + j) * 10,
+        sin(frameCount * 0.001 + j),
         i * 0.1
       );
       translate(
-        cos(frameCount * 0.001 + j) * 10,
+        cos(frameCount * 0.001 + j),
         i * 0.1
       );
       rotateX(frameCount * 0.005);
