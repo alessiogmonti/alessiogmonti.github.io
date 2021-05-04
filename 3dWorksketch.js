@@ -59,15 +59,15 @@ function draw() {
   rotateY(frameCount * 0.01);
   rotateZ(frameCount * 0.01);
   colSet();
-  for (let j = 0; j < 2; j++) {
+  for (let j = 0; j < 5; j++) {
     push();
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 80; i++) {
       translate(
-        sin(frameCount * 0.001 + j),
+        tan(frameCount * 0.001 + j),
         i * 0.1
       );
       translate(
-        cos(frameCount * 0.001 + j),
+        tan(frameCount * 0.001 + j),
         i * 0.1
       );
       rotateX(frameCount * 0.005);
