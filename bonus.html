@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Alessio Monti </title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html{
+      font-size: 5px;
+      font-family: 'Source Sans Pro Extra-light 200', sans-serif;
+      color: #404e5c;
+    }
+
+    body{
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+    p{
+      font-size: 3rem;
+      font-weight: 300;
+      text-transform: lowercase;
+    }
+
+    header{
+      width: 100%;
+      height: 100vh;
+    }
+
+    .top-nav{
+      width: 5%;
+      height: 13vh;
+      position: fixed;
+      top: -100vh;
+      z-index: 10;
+      background: rgba(150,150,150,0.5);
+    }
+
+    .nav-list{
+      list-style: none;
+      width: 100%;
+      height: 100%;
+      display: block;
+      align-items: center;
+    }
+
+    li{
+      color: #eee;
+    }
+
+    .nav-link{
+      font-family: 'Source Sans Pro Bold 700', sans-serif;
+      font-size: 3rem;
+      z-index: 11;
+      color: rgba(255,255,255,1);
+    }
+
+    .nav-link:hover,
+    .nav-link:focus{
+      color: #A64253;
+    }
+
+    .top-nav.open{
+      top: 0;
+      margin: 2rem;
+    }
+
+    .menu-toggler{
+      position: absolute;
+      top: 5rem;
+      right: 5rem;
+      width: 5rem;
+      height: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 1501;
+      transition: transform 350ms ease-out;
+    }
+
+    .menu-toggler.open{
+      transform: rotate(-45deg);
+    }
+
+    .bar{
+      background: linear-gradient(to right, #404e5c, #b4869f);
+      width: 100%;
+      height: 4px;
+      border-radius: .8rem;
+    }
+
+    .bar.half{
+      width: 50%;
+    }
+
+    .bar.start{
+      transform-origin: right;
+      transition: transform 300ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+    }
+
+    .open .bar.start{
+      transform: rotate(-90deg) translateX(.8rem);
+    }
+
+    .bar.end{
+      align-self: flex-end;
+      transform-origin: left;
+      transition: transform 300ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+    }
+
+    .open .bar.end{
+      transform: rotate(-90deg) translateX(-.8rem);
+    }
+
+    .slogan{
+      position: absolute;
+      top: 4%;
+      left: 3%;
+    }
+
+    .slogan h1{
+      font-size: 3.5rem;
+      font-weight: 1.2;
+      color: #404e5c;
+
+    }
+
+    .landing-image{
+      position: absolute;
+      top: 0%;
+      left: 12.2%;
+      width: 90%;
+    }
+
+    .landing-text{
+      position: absolute;
+      top: 35%;
+      width: 100%;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .landing-text h1{
+      letter-spacing: 0.8rem;
+      font-size: 11rem;
+      letter-spacing: 1.2rem;
+      font-family: 'Source Sans Pro', sans-serif;
+      -webkit-text-stroke-width: .2rem;
+      -webkit-text-stroke-color: #606d6c;
+      -webkit-text-fill-color: rgba(255,255,255,1);
+      padding: 0.6rem;
+      user-select: none;
+      text-transform: lowercase;
+    }
+
+    .landing-text h6{
+      padding-top: 4rem;
+      margin-left: 1rem;
+      font-size: 3rem;
+      font-weight: 350;
+      font-style: italic;
+      color: rgb(200,200,255);
+    }
+
+    .copyright{
+      width: 100%;
+      text-align: center;
+      padding: 2rem 0;
+      position: relative;
+    }
+
+    .copyright p{
+      font-size: 1.4rem;
+    }
+    </style>
+</head>
+  <body>
+    <header>
+      <div class="menu-toggler">
+        <div class="bar half start"></div>
+        <div class="bar"></div>
+        <div class="bar half end"></div>
+      </div>
+      <nav class="top-nav">
+        <ul class="top-nav">
+          <ul class="nav-list">
+            <li>
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li>
+              <a href="index.html#about" class="nav-link">About</a>
+            </li>
+            <li>
+              <a href="index.html#services" class="nav-link">Services</a>
+            </li>
+            <li>
+              <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+            </li>
+            <li>
+              <a href="reindex.html#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+      </nav>
+      <div class="landing-text">
+          <a href="index.html" class="cta"><h1> Alessio Monti </h1></a>
+          <a href="ResumeV.pdf" class="cta"><h6> >> resume << </h6></a>
+      </div>
+    </header>
+    <footer class="copyright">
+      <p>&copy; 2021 Alessio Monti <p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="main.js"></script>
+    <script src="sketch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+  </body>
+  </html>

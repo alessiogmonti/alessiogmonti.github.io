@@ -1,0 +1,212 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Source Sans Pro Light';
+  font-size: 5px;
+}
+
+img{
+  width: 30%;
+  opacity: 0.2;
+  border-style: ridge;
+  border-width: 0.1rem;
+  border-color: #000;
+}
+
+a{
+  text-decoration: none;
+}
+
+#c{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+.instr{
+  z-index: 500;
+  cursor: pointer;
+  position: absolute;
+  top: 13rem;
+  right: 7rem;
+  width: 2rem;
+  height: 4rem;
+}
+
+.information{
+  z-index: 500;
+  cursor: pointer;
+  position: absolute;
+  top: 18rem;
+  right: 7rem;
+  width: 2rem;
+  height: 4rem;
+}
+
+.material-icons-outlined{
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  color: rgba(0, 0, 0, 0.26);
+}
+.material-icons-outlined:hover{
+  color: rgba(233, 138, 21, 0.7);
+}
+
+#instructions{
+  font-family: 'Source Sans Pro Light';
+  font-weight: 100;
+  font-style: italic;
+  font-size: 3rem;
+  text-transform: lowercase;
+  z-index: 100;
+  position: absolute;
+  top: 23rem;
+  right: 5rem;
+  width: 17rem;
+  height: 4rem;
+  display: none;
+}
+
+#info{
+  position: fixed;
+  padding-left: 20px;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  display:none;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#info[style*='display: block']{
+    display: flex !important;
+}
+
+
+#name{
+  font-size: 8rem;
+}
+
+#description{
+  font-size: 7rem;
+  font-weight: normal;
+  width: 50%;
+  padding-left: 3rem;
+}
+
+#ghImg{
+  z-index: 100;
+  text-align: right;
+  position: fixed;
+  bottom: 50px;
+  margin-right: 7rem;
+}
+
+#ghImg :hover{
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0.8;
+}
+
+
+/* HEADER STYLE BEGINS HERE */
+header{
+  width: 100%;
+  height: 1%;
+}
+
+.top-nav{
+  width: 30%;
+  height: 17vh;
+  position: fixed;
+  top: -100vh;
+  z-index: 10;
+  background: hsla(202,61%,54%,0.01);
+}
+
+.nav-list{
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+}
+
+li{
+  color: #eee;
+}
+
+.nav-link{
+  font-family: 'Source Sans Pro Bold 700', sans-serif;
+  font-size: 3rem;
+  color: #404e5c;
+  background-color: rgba(255,255,255,0.5);
+  margin: 3rem;
+}
+
+.nav-link:hover,
+.nav-link:focus{
+  color: #e98a15;
+}
+
+.top-nav.open{
+  top: 0;
+  margin: 2rem;
+}
+
+.menu-toggler{
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  width: 5rem;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1501;
+  transition: transform 350ms ease-out;
+}
+
+.menu-toggler.open{
+  transform: rotate(-45deg);
+}
+
+.bar{
+  background: linear-gradient(to right, #404e5c, #b4869f);
+  width: 100%;
+  height: 4px;
+  border-radius: .8rem;
+}
+
+.bar.half{
+  width: 50%;
+}
+
+.bar.start{
+  transform-origin: right;
+  transition: transform 300ms cubic-bezier(0.54, -0.81, 0.57, 0.57)
+}
+
+.open .bar.start{
+  transform: rotate(-90deg) translateX(.8rem);
+}
+
+.bar.end{
+  align-self: flex-end;
+  transform-origin: left;
+  transition: transform 300ms cubic-bezier(0.54, -0.81, 0.57, 0.57)
+}
+
+.open .bar.end{
+  transform: rotate(-90deg) translateX(-.8rem);
+}
+
+/* HEADER STYLE ENDS HERE */

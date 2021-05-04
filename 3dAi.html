@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My 3D sketch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="display3D.css">
+  </head>
+  <body>
+    <header>
+      <div class="menu-toggler">
+        <div class="bar half start"></div>
+        <div class="bar"></div>
+        <div class="bar half end"></div>
+      </div>
+      <nav class="top-nav">
+        <ul class="top-nav">
+          <ul class="nav-list">
+            <li>
+              <a href="index.html" class="nav-link">Home </a>
+            </li>
+            <li>
+              <a href="3dWork.html" class="nav-link"> CAD & Graphics </a>
+            </li>
+            <li>
+              <a href="index.html#portfolio" class="nav-link"> Portfolio </a>
+            </li>
+            <li>
+              <a href="index.html#contact" class="nav-link"> Contact </a>
+            </li>
+          </ul>
+      </nav>
+    </header>
+    <canvas id="c"></canvas>
+    <div class="instr">
+      <span class="material-icons-outlined">settings_suggest</span>
+    </div>
+    <div class="information">
+      <span class="material-icons-outlined">info</span>
+    </div>
+    <div id="instructions">
+      <h7> Scroll to zoom, drag to rotate & shift+drag to pan </h7>
+    </div>
+    <div id="info">
+      <div id="name">
+        <h1> #003 </h1>
+      </div>
+      <div id="description">
+        <h6> An exploration of patterning from a series of
+          NURBS curves, using Weaverbird's mesh subdivision and tesselate with wave attractors.
+      </div>
+      <div id="ghImg">
+        <img src="aid.png" alt="">
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script> -->
+    <script src="main.js"></script>
+    <script src="info3D.js"></script>
+    <script type="module" src="rhino.js"></script>
+  </body>
+</html>
