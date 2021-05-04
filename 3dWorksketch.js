@@ -59,7 +59,7 @@ function draw() {
   rotateY(frameCount * 0.01);
   rotateZ(frameCount * 0.01);
   colSet();
-  for (let j = 0; j < 5; j++) {
+  for (let j = 0; j < 2; j++) {
     push();
     for (let i = 0; i < 80; i++) {
       translate(
