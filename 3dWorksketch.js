@@ -61,7 +61,7 @@ function draw() {
   colSet();
   for (let j = 0; j < 2; j++) {
     push();
-    for (let i = 0; i < 80; i++) {
+    for (let i = 0; i < 10; i++) {
       translate(
         sin(frameCount * 0.001 + j),
         i * 0.1
