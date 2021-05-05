@@ -37,7 +37,7 @@ function main() {
   const fillLight = new THREE.DirectionalLight(new THREE.Color('rgb(87, 111, 158)'), 0.75);
   fillLight.position.set(100, 0, 100);
 
-  const backLight = new THREE.DirectionalLight(0xffffff, 1);
+  const backLight = new THREE.DirectionalLight(new THREE.Color('#e8c7de'), 1);
   backLight.position.set(100, 0, -100).normalize();
 
   scene.add(keyLight);
