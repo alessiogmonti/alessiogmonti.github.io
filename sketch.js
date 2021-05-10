@@ -19,7 +19,7 @@ function setup() {
   }
   setInterval(timeIt, 500)
   c1 = color('rgba(205,114,127,0.6)');
-  c2 = color('rgba(110,210,200,0.5)');
+  c2 = color('rgba(180,250,240,0.1)');
  bg = gradient(0,0, windowWidth, windowHeight, c2, c1);
 }
 
