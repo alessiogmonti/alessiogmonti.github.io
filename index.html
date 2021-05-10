@@ -4,13 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Alessio Monti </title>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="restyle.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;700&family=Source+Sans+Pro:wght@200;400;900&display=swap" rel="stylesheet">
 </head>
   <body>
     <header>
@@ -28,9 +26,9 @@
             <li>
               <a href="#about" class="nav-link">About</a>
             </li>
-            <li>
+            <!-- <li>
               <a href="#services" class="nav-link">Services</a>
-            </li>
+            </li> -->
             <li>
               <a href="#portfolio" class="nav-link">Portfolio</a>
             </li>
@@ -50,26 +48,27 @@
       <div class="landing-image" data-aos="fade-in" data-aos-delay="0" data-aos-duration="500">
       </div>
       <div class="slogan">
-          <h1> Alessio Monti - data driven design github </h1>
+          <h1> Alessio Monti - data driven design </h1>
       </div>
+      <span class="material-icons-outlinedA">
+          keyboard_arrow_down
+      </span>
     </header>
   <div class="all">
     <section class="about" id="about">
       <div class="container">
-        <div class="profile-img" data-aos="fade-right" data-aos-delay="200">
-          <div class= "about-heading">
-            <h1> Algorithmically <br> Interpreted <br>Designs </h1>
-          </div>
-          <img src="images/AIDT.jpg" alt="">
-        </div>
         <div class="about-details" data-aos="fade-left" data-aos-delay="300">
           <p>
-            are at the vanguard of today's problem solving techniques: Solutions are data driven, fluid and endlessly generated.
-            <br> They are a fruit of the intersection of 3D Modeling, 3D Printing and Artificial Intelligence. <br> <br>
-            I earned a BFA in Design & Technology at Parsons in New York, where I focused on designing both web-based interactions and smart products. I worked
-            as a consultant for creatives and tech businesses, applying the aesthetic sensibility and technical skills I cultivated at Parsons. During this time I also designed a collection of
-            jewelry accessories and studied artificial intelligence and its applications. <br> <br>
-            I am currently based in Milan where I am working on my data science & visualization skills and developing my freelance career.
+            I earned a BFA in Design & Technology at Parsons in New York, where I focused on designing both web-based interactions and smart products.
+          </p>
+          <p>
+            <br>
+            I worked as a consultant for creatives and tech businesses, applying the aesthetic sensibility and technical skills I cultivated at Parsons. During this time I also designed a collection of
+            jewelry accessories and studied artificial intelligence and its applications.
+          </p>
+          <p>
+            <br>
+            I am currently based in Milan and working on my data science & visualization skills while developing my freelance career.
           </p>
           <div class="social-media">
             <ul class="nav-list">
@@ -80,19 +79,26 @@
             </ul>
           </div>
         </div>
+        <div class= "about-heading">
+          <h1> Algorithmically Interpreted Designs are generative, data driven and fluid.
+          <br> They are a fruit of the intersection of artificial intelligence, 3D modeling and 3D Printing.</h1>
+        </div>
+        <div class="profile-img" data-aos="fade-right" data-aos-delay="200">
+          <img src="images/AIDT.jpg" alt="">
+        </div>
       </div>
     </section>
 
-    <section class="services" id="services">
+    <!-- <section class="services" id="services">
       <div class="container">
         <div class="section-heading">
-          <h1> Skills </h1>
+          <h1> skills </h1>
         </div>
         <div class="my-skills">
           <div class="skill" data-aos="fade-in" data-aos-delay="200">
             <div class="icon-container">
-              <!-- <i class= "fas fa-layer-group"></i> -->
-              <img src="images/3Dmodels.png" alt="">
+              <! <i class= "fas fa-layer-group"></i> -->
+              <!-- <img src="images/3Dmodels.png" alt="">
             </div>
             <h1>Parametric 3D Models for Visualization, Product Strategy & Design</h1>
             <p>
@@ -101,8 +107,8 @@
           </div>
           <div class="skill" data-aos="fade-in" data-aos-delay="400">
             <div class="icon-container1">
-              <!-- <i class= "fas fa-code"></i> -->
-              <img src="images/machinelearning.png" alt="">
+              <! <i class= "fas fa-code"></i> -->
+              <!-- <img src="images/machinelearning.png" alt="">
             </div>
             <h1>Data Science, Web Scraping and Machine Learning with Python</h1>
             <p>
@@ -120,23 +126,23 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="portfolio" id="portfolio">
       <div class="container">
-        <div class="section-heading">
+        <!-- <div class="portfolio-heading">
           <h1>Recent Projects</h1>
-        </div>
+        </div> -->
         <div class="portfolio-item">
           <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="200">
             <img src-"images/portitem1.jpeg" alt="">
           </div>
           <div class="portfolio-description" data-aos="fade-left" data-aos-delay="400">
             <h6> Machine Learning, Data Science & Visualization </h6>
-            <h1> Forecasting, Language Processing & Computer Vision </h1>
-            <p>
-              Data Science projects revolving around supervised and unsupervised learning, for classification and regression.
-            </p>
+            <!-- <h1> Forecasting, Language Processing & Computer Vision </h1> -->
+            <h1>
+              Data Science projects using Pandas, Numpy, ScitKit, TensorFlow & Seaborn
+            </h1>
             <!-- <a href='#' class="cta"> View Details </a> -->
             <a href='#' class="cta1"> UNDER CONSTRUCTION </a>
           </div>
@@ -144,10 +150,11 @@
         <div class="portfolio-item">
           <div class="portfolio-description has-margin-right" data-aos="fade-right" data-aos-delay="600">
             <h6> Smart Home Products & Wearable Tech </h6>
-            <h1> Creative Entrepreneurship & Concept Development</h1>
-            <p>
-              Brand Strategy, Market Research and Prototyping from Ideation to Deployment.
-            </p>
+            <!-- <h1> Creative Entrepreneurship & Concept Development</h1> -->
+            <h1>
+              Brand Strategy, Market Research and Prototypes built with Adobe Creative Suite, Autodesk Fusion &
+              openFrameworks in c++
+            </h1>
             <!-- <a href='#' class="cta"> View Details </a> -->
             <a href='#' class="cta1"> UNDER CONSTRUCTION </a>
           </div>
@@ -159,12 +166,12 @@
           <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="900">
             <img src-"images/portitem3.jpeg" alt="">
           </div>
-          <div class="portfolio-description" data-aos="fade-right" data-aos-delay="800">
+          <div class="portfolio-description" data-aos="fade-right" data-aos-delay="700">
             <h6> Computer Aided Design and Graphics </h6>
-            <h1> Parametric Geometries, AI Generated Structures and Web-Based Rendering </h1>
-            <p>
-              Digital media, jewelry and algorithmically defined renderings.
-            </p>
+            <!-- <h1> Parametric Geometries, AI Generated Structures and Web-Based Rendering </h1> -->
+            <h1>
+              Digital media and parametric renderings with Rhino, Grasshopper, three.js & p5.js
+            </h1>
             <a href='3dWork.html' class="cta"> View Details </a>
           </div>
         </div>
@@ -176,7 +183,7 @@
         <div class="section-heading">
           <h1>Get in touch</h1>
         </div>
-        <form action="" data-aos="fade-up" data-aos-delay="200">
+        <form action="/action_page.php" method="POST" data-aos="fade-up" data-aos-delay="200">
           <label for="name"></label>
           <input type="text" id="name" name="name" placeholder="Enter your name..." required>
           <label for="email"></label>
@@ -185,7 +192,7 @@
           <select name="services" id="services">
             <option value="">Data Science, Machine Learning & Software Engineering</option>
             <option value="">3D & Graphics</option>
-            <option value="">Concept Development and Strategy</option>
+            <option value="">Concept Development and Creatuve Design</option>
           </select>
           <label for="subject"></label>
           <textarea name="subject" id="subject" placeholder="Get in touch!" cols="10" rows="10"></textarea>
@@ -196,7 +203,7 @@
   </div>
     <footer class="copyright">
       <div class="up" id="up">
-        <i class="fas fa-chevron-up"></i>
+        <span class="material-icons-outlined">arrow_circle_up</span>
       </div>
       <p>&copy; 2021 Alessio Monti <p>
     </footer>
@@ -204,7 +211,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="main.js"></script>
-    <!-- <script src="sketch.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
     <script src="testjs.js"></script>
   </body>

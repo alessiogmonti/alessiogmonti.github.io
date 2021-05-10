@@ -57,20 +57,20 @@ function colSet(){
 function draw() {
   background(250);
   rotateY(frameCount * 0.01);
-  rotateX(frameCount * 0.01);
+  rotateZ(frameCount * 0.01);
   colSet();
   for (let j = 0; j < 5; j++) {
     push();
     for (let i = 0; i < 80; i++) {
       translate(
-        tan(frameCount * 0.001 + j) *50,
+        sin(frameCount * 0.001 + j) * 10,
         i * 0.1
       );
       translate(
-        tan(frameCount * 0.001 + j) *50,
+        cos(frameCount * 0.001 + j) * 10,
         i * 0.1
       );
-      rotateZ(frameCount * 0.005);
+      rotateX(frameCount * 0.005);
       push();
       strokeWeight(0.3);
       sphere(20, 6, 4);

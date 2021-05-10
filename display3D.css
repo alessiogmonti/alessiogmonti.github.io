@@ -1,8 +1,9 @@
 html, body {
   margin: 0;
   height: 100%;
-  font-family: 'Source Sans Pro Light';
+  font-family: 'Source Sans Pro';
   font-size: 5px;
+  color: #404e5c;
 }
 
 img{
@@ -38,8 +39,8 @@ a{
   z-index: 500;
   cursor: pointer;
   position: absolute;
-  top: 18rem;
-  right: 7rem;
+  top: 22rem;
+  right: 7.2rem;
   width: 2rem;
   height: 4rem;
 }
@@ -48,7 +49,7 @@ a{
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
+  font-size: 36px;  /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -63,10 +64,10 @@ a{
 }
 
 #instructions{
-  font-family: 'Source Sans Pro Light';
-  font-weight: 100;
+  font-family: 'Source Sans Pro';
+  font-weight: 200;
   font-style: italic;
-  font-size: 3rem;
+  font-size: 4rem;
   text-transform: lowercase;
   z-index: 100;
   position: absolute;
@@ -84,7 +85,7 @@ a{
   width: 100%;
   z-index: 100;
   display:none;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 #info[style*='display: block']{
@@ -93,14 +94,18 @@ a{
 
 
 #name{
-  font-size: 8rem;
+  font-family: serif;
+  font-size: 11rem;
+  font-weight: 200;
+  font-style: italic;
 }
 
 #description{
-  font-size: 7rem;
-  font-weight: normal;
-  width: 50%;
-  padding-left: 3rem;
+  font-size: 4rem;
+  font-family: 'Source Sans Pro';
+  font-weight: 200;
+  width: 40%;
+  padding-left: 4rem;
 }
 
 #ghImg{
@@ -124,7 +129,7 @@ header{
 }
 
 .top-nav{
-  width: 30%;
+  width: 35%;
   height: 17vh;
   position: fixed;
   top: -100vh;
@@ -144,8 +149,9 @@ li{
 }
 
 .nav-link{
-  font-family: 'Source Sans Pro Bold 700', sans-serif;
-  font-size: 3rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 4rem;
+  font-weight: 200;
   color: #404e5c;
   background-color: rgba(255,255,255,0.5);
   margin: 3rem;

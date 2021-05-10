@@ -24,7 +24,7 @@ var sketch = function(p){
 
   p.setup = function(){
     p.canvas = p.createCanvas(p.windowWidth-150, p.windowHeight, p.WEBGL);
-    p.canvas.position(150,0);
+    p.canvas.position(270,0);
     p.canvas.style('z-index', '-1');
     p.background('rgba(233,233,233,0.1)');
     console.log('running');

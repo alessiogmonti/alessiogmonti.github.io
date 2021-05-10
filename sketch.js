@@ -18,8 +18,8 @@ function setup() {
     flock.addBoid(b);
   }
   setInterval(timeIt, 500)
-  c1 = color('rgba(30,11,30,0.9)');
-  c2 = color('rgba(110,210,200,1)');
+  c1 = color('rgba(205,114,127,0.6)');
+  c2 = color('rgba(110,210,200,0.5)');
  bg = gradient(0,0, windowWidth, windowHeight, c2, c1);
 }
 
@@ -52,7 +52,7 @@ function draw() {
   h++;
   translate(-width/2,-height/2,0); //moves our drawing origin to the top left corner
   push();
-    fill('rgba(30,11,30,0.9)');
+    fill('rgba(64,78,92, 0.1)');
     rect(8, windowHeight-70, 180, 60);
     ui();
   pop();
@@ -60,8 +60,8 @@ function draw() {
 }
 
 function ui(){
-  fill('white');
-  stroke('white');
+  fill('rgba(64,78,92, 1)');
+  stroke('rgba(64,78,92, 1)');
   textSize(11);
   var a = text("Framerate: " + timer, 12, windowHeight-20);
   var b = text("Flock count: "+ counter, 12, windowHeight-35);
@@ -196,7 +196,7 @@ Boid.prototype.render = function() {
   strokeWeight(1)
   // stroke('rgba(64,78,92,0.09)');
   fill('rgba(10,10,180,0.09)');
-  stroke('rgba(130,131,180, 0.5)');
+  stroke('rgba(64,78,92, 0.5)');
   push();
   translate(this.position.x, this.position.y);
   rotate(theta);
