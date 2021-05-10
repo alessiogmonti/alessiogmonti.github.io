@@ -357,7 +357,7 @@ li{
 .portfolio{
   padding-left: 40rem;
 }
-.portfolio-heading{
+/* .portfolio-heading{
   width: 52%;
   bottom: 1rem;
   left: 10rem;
@@ -375,7 +375,7 @@ li{
   font-style: italic;
   font-weight: 200;
   line-height: 11rem;
-}
+} */
 
 .portfolio-item{
   text-transform: lowercase;
@@ -680,20 +680,55 @@ input[type="submit"]:hover{
       top: 2rem;
       right: 2rem;
     }
+    .landing-text{
+    }
     .landing-text h1{
       font-size: 8rem;
     }
+    .slogan h1{
+      font-size: 3.5rem;
+    }
     .landing-text h6{
-      font-size: 1.4rem;
+      font-size: 3.5rem;
     }
     .nav-link{
       font-size: 3.5rem;
     }
-    .about .container{
-      flex-direction: column;
+    .about-heading{
+      position: absolute;
+      bottom: 73%;
+      width: 90%;
+      left: 3rem;
+
+    }
+    .about-heading h1{
+      letter-spacing: 0.2rem;
+      font-size: 6rem;
+      line-height: 6rem;
+    }
+    .about-details{
+      padding-top: 50rem;
+      column-count: 1;
+      position: static;
+      padding-left: 5rem;
+      width: 93%;
+      column-gap: 3rem;
+      margin-bottom: 10rem;
+    }
+    .about-details p{
+      font-size: 3.5rem;
     }
     .profile-img{
       margin: 0 0 7rem 0;
+    }
+    .portfolio{
+      padding-left: 0rem;
+    }
+    .portfolio-description h1{
+      font-size: 3.5rem;
+    }
+    .portfolio-description h6{
+      font-size: 6rem;
     }
     .portfolio-item{
       flex-direction: column;
@@ -705,14 +740,11 @@ input[type="submit"]:hover{
       margin: 0;
       order: 2;
     }
-    /* .timeline p{
-      font-size: 1.6rem;
+    .section-heading h1{
+      font-size: 6rem;
     }
-    .timeline .date::before{
-      font-size: 1.4rem;
-    } */
     form{
-      width: 100%;
+      width: 90%;
     }
     .up{
       right: 2rem;
