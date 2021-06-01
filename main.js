@@ -34,3 +34,31 @@ $(document).ready(function (){
     once: true
   });
 });
+
+$('.contact1-form').on('submit',function(e){
+        //optional validation code here
+
+        e.preventDefault();
+
+        $.ajax({
+            url: "https://script.google.com/macros/s/AKfycbz68cmNHjOyHXsKHTVVxMtATjA-mpwoLqT9qISN4VT6MTGf_GwhCfRhjDcWXQxcC2WMNw/exec",
+            method: "POST",
+            dataType: "json",
+            data: $(".contact1-form").serialize(),
+            success: function(response) {
+
+                if(response.result == "success") {
+                    $('.contact1-form')[0].reset();
+                    alert('Message sent, thank you!');
+                    return true;
+                }
+                else {
+                    alert("Something went wrong. Please try again.")
+                }
+            },
+            error: function() {
+
+                alert("Something went wrong. Please try again.")
+            }
+        })
+    });
