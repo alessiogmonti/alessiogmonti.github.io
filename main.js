@@ -58,7 +58,7 @@ $('.contact1-form').on('submit',function(e){
             },
             error: function() {
 
-                alert("Something went wrong. Please try again.")
+                alert("Something went wrong.")
             }
         })
     });
