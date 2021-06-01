@@ -41,7 +41,7 @@ $('.contact1-form').on('submit',function(e){
         e.preventDefault();
 
         $.ajax({
-            url: "https://script.google.com/macros/s/AKfycbz68cmNHjOyHXsKHTVVxMtATjA-mpwoLqT9qISN4VT6MTGf_GwhCfRhjDcWXQxcC2WMNw/exec",
+            url: "https://script.google.com/macros/s/AKfycbxBnyuIH3LQNaZ5_kxwSMl1lSZkHgBe96-_k7r7QNKZC564xRS6dWidKW16EA7g1yRpng/exec",
             method: "POST",
             dataType: "json",
             data: $(".contact1-form").serialize(),
