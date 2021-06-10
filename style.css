@@ -181,7 +181,7 @@ li{
 
 .slogan{
   position: absolute;
-  top: 2%;
+  top: 3%;
   left: 17%;
   text-align: left;
 }
@@ -209,6 +209,7 @@ li{
   width: 80%;
   text-align: left;
   z-index: 1;
+  cursor: crosshair;
 }
 
 .landing-text h1{
@@ -604,6 +605,7 @@ input[type="submit"]:hover{
   direction: ltr;
   cursor: pointer;
   animation: pulse 3s infinite;
+  padding-top: 2px;
 }
 
 .copyright p{
