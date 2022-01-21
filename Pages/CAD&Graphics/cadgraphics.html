@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Alessio Monti </title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cadgraphicsStyle.css">
+</head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="menu-toggler">
+          <div class="bar half start"></div>
+          <div class="bar"></div>
+          <div class="bar half end"></div>
+        </div>
+        <nav class="top-nav">
+          <ul class="top-nav">
+            <ul class="nav-list">
+              <li>
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li>
+                <a href="index.html#about" class="nav-link">About</a>
+              </li>
+              <li>
+                <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+              </li>
+              <li>
+                <a href="reindex.html#contact" class="nav-link">Contact</a>
+              </li>
+            </ul>
+        </nav>
+      </header>
+
+        <div class="slide one">
+          <div class="landing-text">
+            <a href="../../../index.html" class="cta">
+            <h1>Computer <br> Aided <br> Design <br> & <br> Graphics</h1>
+            <h6> click for home </h6></a>
+          </div>
+          <div class="about">
+            <div class="about-details">
+              <p>
+                Computer Aided Design (CAD) is a broad term for software capable of creating 2D and 3D objects.
+                These can be static or fluid, for media, production, prototyping, or simulation.
+              </p>
+              <p>
+                A static CAD model is simply a graphic or 3D model that cannot be changed unless elements of its
+                structure are directly modified. Fluid CAD models can change programmatically, whether according to a data feed, user-manipulated parameters
+                or through algorithmic iteration.
+              </p>
+              <div class="image1">
+                <img src="ghSphereTB.png" alt="">
+              </div>
+              <p>
+                Engineering-focused programs like Rhino and Autodesk Fusion allow the user to define the logic that
+                describes the object. The object is defined by the order of operations selected by the user and in this
+                regard, the object can be modified from any point. Non-parametric programs would require you to undo
+                your operations until you reach the desired modification point, but conversely are simpler and
+                do not require as much planning.
+              </p>
+              <p>
+                The advantages of the non-linear model making technique are its flexibility and capacity for iteration.
+                Each operation is a mathematical equation that successively manipulates the previous definition, affecting
+                the coordinates that make up each point within the curves that define the shape of the object. The
+                degree of manipulation is determined by variables within the equation.
+              </p>
+              <p>
+                The variables of these operations are user defined but can also be manipulated programmatically according to
+                additional parameters, known as hyper-parameters. These are technically parameters of parameters, and they affect
+                the order of operations, the operations selected and the variables within these operations.
+              </p>
+              <p>
+                These hyper-parameters
+                are tuned according to feedback from a function that evaluates the model's performance in respect to a particular task,
+                while remaining within the bounds set by the user.
+              </p>
+              <p>
+                The following example illustrates a simple hyper-parametrized model: the thickness of this structure is manipulated by
+                an iterative algorithm that is attempting to maximise stress tolerance while minimizing material usage, thereby creating
+                the best possible structure in the most cost effective manner.
+              </p>
+              <p>
+                More advanced systems can leverage real time data feeds to forecast future scenarios and adapt to them before they occur.
+                This is an example of a wheel adjusting its spoke strength in response to forcasted levels of wear and tear, according to
+                generated road models. These predictive models are called digital twins.
+              </p>
+            </div>
+          </div>
+        </div>
+      <footer class="copyright">
+        <p>&copy; 2021 Alessio Monti <p>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../main.js"></script>
+    <script src="3dWorksketch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+  </body>
+  </html>
