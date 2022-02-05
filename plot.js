@@ -1,9 +1,9 @@
-let data = ['SlideshowImages/ML/ugaImproved.png', 'SlideshowImages/ML/umapMBenz.png', 'SlideshowImages/ML/efficientnetb0colorful.png', 'SlideshowImages/ML/red.png', 'SlideshowImages/ML/tslawheel.png'];
+let data = ['SlideshowImages/ML/ugaImproved.png', 'SlideshowImages/ML/umapMBenz.png', 'SlideshowImages/ML/effFrontier.png', 'SlideshowImages/ML/PortfoliovSPY.png','SlideshowImages/ML/bbands.png', 'SlideshowImages/ML/efficientnetb0colorful.png'];
 let w = window,
 		d = document,
 		e = d.documentElement,
 		g = d.getElementsByTagName('body')[0],
-		width = 1400,
+		width = window.innerWidth,
     y = 600;
 
 let svg = d3.select("#graph").append("svg")
@@ -28,10 +28,10 @@ let rects = svg.selectAll('content')
 							 .attr("class", "content")
 							 .attr("y", 0)
 							 .attr("x", (d, i) => xScale(d,i))
-							 .attr("width", (d,i) => xScale(100,i))
+							 .attr("width", (d,i) => xScale(5,i))
 							 .attr("height", "600px");
 
-    let distortion = 4;
+    let distortion = 40;
 
     function fisheye(_, a) {
       let x = xScale(_),
@@ -55,7 +55,7 @@ function mlData(){
 			 .attr("class", "content")
 			 .attr("y", 0)
 			 .attr("x", (d, i) => xScale(d,i))
-			 .attr("width", (d,i) => xScale(100,i))
+			 .attr("width", (d,i) => xScale(5,i))
 			 .attr("height", "600px");
 }
 
@@ -70,7 +70,7 @@ function cadData(){
 			 .attr("class", "content")
 			 .attr("y", 0)
 			 .attr("x", (d, i) => xScale(d,i))
-			 .attr("width", (d,i) => xScale(100,i))
+			 .attr("width", (d,i) => xScale(5,i))
 			 .attr("height", "600px");
 }
 function propData(){

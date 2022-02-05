@@ -3,7 +3,7 @@ let c1, c2;
 let bg;
 let check = 0;
 function preload() {
- apercu = loadFont('/Pages/About/Assets/apercumedium.otf');
+ // apercu = loadFont('/Pages/About/Assets/apercumedium.otf');
 }
 
 function setup() {
@@ -11,7 +11,7 @@ function setup() {
   canvas.position(0,0, 'fixed');
   canvas.style('z-index', '-1');
   translate(-width/2,-height/2,0); //moves our drawing origin to the top left corner
-  textFont(apercu);
+  // textFont(apercu);
   // translate(-width/2,-height/2,0); //moves our drawing origin to the top left corner
 
   flock = new Flock();
@@ -53,7 +53,7 @@ function draw() {
   translate(-width/2,-height/2,0); //moves our drawing origin to the top left corner
   push();
     fill('rgba(64,78,92, 0.1)');
-    rect(8, windowHeight-70, 180, 60);
+    rect(570,90, 600, 380);
     ui();
   pop();
   flock.run();

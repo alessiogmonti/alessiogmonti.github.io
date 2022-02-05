@@ -14,6 +14,7 @@ $(document).ready(function (){
     $('html, body').animate({
       scrollTop: $($(this).attr('href')).offset().top -100
     }, 1000);
+    $('.slogan').fadeToggle(100,"linear");
   });
 
   $('.arrowdown').on('click', function() {
@@ -27,7 +28,7 @@ $(document).ready(function (){
       scrollTop: 0
     }, 500);
   });
-  
+
   AOS.init({
     easing: 'ease',
     duration: 1800,

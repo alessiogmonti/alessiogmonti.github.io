@@ -5,7 +5,7 @@
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-    background: #FF0000;
+    background: transparent;
 }
 
 *{
@@ -20,6 +20,7 @@ html{
   color: black;
   overflow-x: hidden;
   cursor: crosshair;
+  /* background-color: black; */
 }
 
 body{
@@ -28,8 +29,12 @@ body{
 }
 
 section{
-  padding-top: 5rem;
-  padding-bottom: 20rem;
+  /* padding-top: 5rem; */
+  /* padding-bottom: 20rem; */
+}
+
+section .about{
+  margin-bottom: 150rem;
 }
 
 a{
@@ -50,13 +55,17 @@ img{
 }
 
 .all{
+  /* height: 100vh; */
+  /* overflow-x: hidden; */
+  /* background-color: rgba(25, 25, 25, 1); */
+  /* margin: 5rem; */
 }
 /*End global*/
 
 /*Start reusable*/
 .container{
   height: 100%;
-  margin: 7rem auto;
+  margin: 7rem;
   position: relative;
 }
 
@@ -70,7 +79,7 @@ img{
   text-align: left;
   letter-spacing: 0.8rem;
   font-size: 9rem;
-  font-family: "Source Sans Pro";;
+  font-family: "Source Sans Pro";
   font-style: italic;
   font-weight: 400;
   line-height: 11rem;
@@ -91,6 +100,7 @@ header{
 }
 
 .top-nav{
+  display: inline-block;
   width: 5%;
   height: 10rem;
   position: fixed;
@@ -188,10 +198,16 @@ li{
 }
 
 .slogan{
+  background-color: rgba(255,255,255,0.9);
+  z-index: 10;
   position: absolute;
   top: 2%;
   left: 16rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 1rem;
   text-align: left;
+  display: inline-block;
 }
 
 .sloganText h1{
@@ -199,7 +215,6 @@ li{
   font-size: 4.5rem;
   font-weight: 400;
   color: black;
-
 }
 
 /*End header*/
@@ -232,13 +247,12 @@ li{
 }
 
 .ticker-wrap {
-  bottom: -1.4rem;
+  bottom: -0.1rem;
   position: absolute;
   width: 300%;
   overflow: hidden;
   height: 6rem;
-  background-color: rgba(0,0,0,0);
-  left: 31rem;
+  left: 39rem;
   box-sizing: content-box;
 }
 .ticker-wrap .ticker {
@@ -260,59 +274,82 @@ li{
 }
 .ticker-wrap .ticker__item {
   display: inline-block;
-  padding: 0 4rem;
+  padding-bottom: 1.5rem;
+  margin-left: 6rem;
   font-family: 'Source Sans Pro';
   font-size: 4.5rem;
   font-weight: 200;
   color: #1956F0;
   text-transform: lowercase;
+  background-color: rgba(255,255,255,0.9);
   font-style: italic;
 }
 /*End Ticker*/
 
 /*Start Landing Text */
 .landing{
-  display: inline;
+  /* display: inline; */
   position: relative;
   height: 100vh;
-  margin: 5rem;
+  margin: 2rem;
 }
 
-.landing-text{
-  padding: 21rem;
-  padding-bottom: 16rem;
-  padding-left: 15rem;
-  width: 75%;
-  text-align: left;
-  cursor: crosshair;
-}
-
-.landing-text h1{
+.landing h1{
   line-height: 22rem;
   font-size: 17rem;
   letter-spacing: 0.9rem;
   font-family: 'Glory';
   font-weight: 400;
   transform: scale(1,1);
-  /* -webkit-text-stroke-width: .1rem;
-  -webkit-text-stroke-color: black;
-  -webkit-text-fill-color: black; */
   user-select: none;
   font-style: italic;
   text-transform: lowercase;
 }
 
+.landing-slogan1{
+  float: right;
+  margin-top: 15rem;
+  padding-right: 35rem;
+  margin-bottom: 70rem;
+  width: 35%;
+  text-align: right;
+  cursor: crosshair;
+}
+
+.landing-slogan1 h1{
+}
+
+#guiPanel2{
+  position: absolute;
+  z-index: 1;
+  right: 35rem;
+  bottom: 36rem;
+  margin: 2rem;
+  padding: 2rem;
+  display: block;
+}
+
+#my_dataviz{
+  position: absolute;
+  left: 2rem;
+  text-align: right;
+  z-index: 0;
+  display: inline-block;
+}
+
 .aboutme{
   position: relative;
-  left: 15rem;
+  float: right;
   width: 100%;
-  text-align: left;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  display: flex;
+  text-align: right;
+  margin-bottom: 5rem;
+  padding-right: 35rem;
+  padding-bottom: 20rem;
+  /* display: inline-block; */
 }
 
 .aboutme h6{
+  position: relative;
   font-family: 'Source Sans Pro';
   font-size: 6.6rem;
   font-weight: 300;
@@ -321,9 +358,10 @@ li{
 }
 
 .aboutme a{
-  display: block;
-  position: relative;
+  text-align: right;
+  float: right;
   padding-right: 1rem;
+  margin-left: 25rem;
   overflow: hidden;
 }
 
@@ -343,34 +381,14 @@ li{
 .aboutme a h6:hover::after,
 .aboutme a h6:focus::after{
   opacity: 1;
-  /* transform: translate3d(0, 0.2em, 0); */
   transform: translate3d(0, 0, 0);
-}
-
-.arrowdown {
-  margin-top: -3rem;
-  margin-bottom: 4rem;
-  display: inline-flex;
-  font-family: 'Material Icons';
-  font-weight: lighter;
-  font-style: normal;
-  font-size: 35px;  /* Preferred icon size */
-  display: flex;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  cursor: pointer;
-  animation: pulse 3s infinite;
-  position: relative;
-  left: 50%;
 }
 
 .landing-image{
   position: relative;
-  margin: 1rem;
+  margin: 3rem;
+  padding-top: 20rem;
+  margin-bottom: 30rem;
 }
 
 .landing-image h1{
@@ -379,9 +397,9 @@ li{
   font-weight: 200;
   color: black;
   text-align: right;
-  margin-top: 2rem;
-  margin-right: 9rem;
+  margin-top: 1rem;
   font-weight: 400;
+  width: 26%;
 
 }
 
@@ -393,64 +411,96 @@ li{
 /*End Landing Text */
 
 /*Start about*/
-
-.about-heading{
-  width: 38%;
-  bottom: 9rem;
-  left: 14rem;
-  text-transform: lowercase;
-  z-index: 1;
+.sketchWords{
   position: relative;
 }
 
+#guiPanel{
+  top: 150rem;
+  position: absolute;
+}
+
+#container{
+  display: inline-block;
+  float: right;
+  position: relative;
+}
+
+.graphDesc{
+  display: inline-flex;
+  position: absolute;
+  /* right: 0; */
+  /* top: 0; */
+  left: 80rem;
+  float: right;
+  width: 45%;
+  column-count: 1;
+  /* column-gap: 20rem; */
+  /* margin: 10rem; */
+  /* padding: 10rem; */
+}
+
+.graphDesc h1{
+  font-family: 'Source Sans Pro';
+  font-size: 4rem;
+  font-weight: 200;
+  color: black;
+  text-align: right;
+  margin-top: 1rem;
+  font-weight: 400;
+  width: 45%;
+}
+
+.about-heading{
+  margin: 10rem;
+  padding: 10rem;
+  top: 10rem;
+  width: 44%;
+  text-transform: lowercase;
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+}
+
 .about-heading h1{
-  letter-spacing: 0.9rem;
-  font-size: 12rem;
+  letter-spacing: 0.3rem;
+  font-size: 9rem;
   font-family: 'Glory';
   font-style: italic;
   font-weight: 400;
-  line-height: 12.5rem;
-  transform: scale(1, 0.9);
-  -webkit-text-fill-color: black;
+  line-height: 10rem;
+  transform: scale(1, 1);
+  -webkit-text-fill-color: black /*rgb(242,242,242)*/
   text-align: right;
-}
-
-.about-details{
-  margin-top: -6rem;
-  position: absolute;
-  right: 22rem;
-  width: 38%;
-  column-count: 1;
-  column-gap: 7rem;
-}
-
-.about-details p{
-  font-family: 'Source Sans Pro';
-  font-weight: 300;
-  font-size: 4.5rem;
-  line-height: 7rem;
-  justify-content: space-between;
-  text-align: justify;
-
+  padding-bottom: 10rem;
 }
 /*End about*/
 
-.partition{
-  content: '';
-	position: relative;
-	width: 90%;
-	height: 0.2rem;
-	background-color: #1956F0;
-  text-align: center;
-  left: 5%;
-  margin-bottom: 2rem;
+/*Start D3*/
+
+.portfolio-details{
+  display: inline-flex;
+  position: relative;
+  float: left;
+  width: 80%;
+  margin-left: 5rem;
+  /* column-count: 1; */
+  /* column-gap: 20rem; */
 }
 
-/*Start D3*/
+.portfolio-details p{
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  font-size: 5rem;
+  line-height: 7rem;
+  justify-content: space-between;
+  /* text-align: justify; */
+
+}
 
 .portfolioSelect{
   display: flex;
-  padding: 2rem;
+  padding: 20rem;
   margin: auto;
   width: 99%;
 }
@@ -474,9 +524,8 @@ li{
 
 #graph{
   padding: 2rem;
-  margin: auto;
-  width: 99%;
-  display: block;
+  margin: 2rem;
+  width: 100%;
   position: relative;
 }
 
