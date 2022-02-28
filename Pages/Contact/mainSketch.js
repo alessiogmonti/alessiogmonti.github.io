@@ -30,7 +30,7 @@ import { TWEEN } from 'https://unpkg.com/three@0.127.0/examples/jsm/libs/tween.m
     this.textureGridSize = textureGridSize || 126;
 
     // 使用するフォント名
-    this.fontFamily = fontFamily || 'Helvetica'
+    this.fontFamily = fontFamily || 'Source Sans Pro'
 
     // アニメーション適用度
     // 頂点シェーダ内でアニメーションが3つ定義されており
