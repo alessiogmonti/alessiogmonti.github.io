@@ -45,7 +45,7 @@ $('.contact1-form').on('submit',function(e){
         e.preventDefault();
 
         $.ajax({
-            url: "https://script.google.com/macros/s/AKfycbyZJQV7q5QCwRLWTmZyKhUkgGXYXa-CmVtJSn-sWOXgykuybMZMpuhweWK1orQwqVeRwA/exec",
+            url: "https://script.google.com/macros/s/AKfycbzmGoq7kwKLNdxk_c5nm0Rx4BOGdxBOa2NFoKsp6F_ZY5C4UDT7VYCX9T9NonO2ic-pOw/exec",
             method: "POST",
             dataType: "json",
             data: $(".contact1-form").serialize(),
@@ -61,7 +61,7 @@ $('.contact1-form').on('submit',function(e){
                 }
             },
             error: function() {
-                alert("Uh oh! Something is broken- Please email me directly at alessiomonti97@gmail.com!")
+                alert("Looks like something's broken! Please email me at alessiomonti97@gmail.com while I figure out how to fix")
             }
         })
     });
