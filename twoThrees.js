@@ -78,37 +78,25 @@ function globe() {
 
 
 		let guiobj = { loadGDP: function () {
-
 			for ( var i = 0; i < countries.length; i ++ ) {
-
 				cones[ i ].scale.x = topology.objects.countries.geometries[ i ].properties[ 'GDP(US$M)' ] * 0.000002;
 				cones[ i ].scale.y = topology.objects.countries.geometries[ i ].properties[ 'GDP(US$M)' ] * 0.000002;
 				cones[ i ].scale.z = topology.objects.countries.geometries[ i ].properties[ 'GDP(US$M)' ] * 0.000002;
-
 			}
-
 		},
 		loadPopulation: function () {
-
 			for ( var i = 0; i < countries.length; i ++ ) {
-
 				cones[ i ].scale.x = topology.objects.countries.geometries[ i ].properties[ 'Population Growth Rate' ] * 2.2;
 				cones[ i ].scale.y = topology.objects.countries.geometries[ i ].properties[ 'Population Growth Rate' ] * 2.2;
 				cones[ i ].scale.z = topology.objects.countries.geometries[ i ].properties[ 'Population Growth Rate' ] * 2.2;
-
 			}
-
 		},
 		pressFreedom: function () {
-
 			for ( var i = 0; i < countries.length; i ++ ) {
-
 				cones[ i ].scale.x = 50 / topology.objects.countries.geometries[ i ].properties[ 'Press Freedom Index' ];
 				cones[ i ].scale.y = 50 / topology.objects.countries.geometries[ i ].properties[ 'Press Freedom Index' ];
 				cones[ i ].scale.z = 50 / topology.objects.countries.geometries[ i ].properties[ 'Press Freedom Index' ];
-
 			}
-
 		},
 		rotObj: true };
 
@@ -120,24 +108,16 @@ function globe() {
 		console.log( cones[ 0 ] );
 		controls = new OrbitControls( camera, renderer.domElement );
 		d3.timer( function ( t ) {
-
 			if ( guiobj.rotObj ) {
-
 				for ( var i = 0; i < countries.length; i ++ ) {
-
 					countries[ i ].rotation.x = Math.sin( t / 21000 ) * Math.PI / 3 - Math.PI / 2;
 					countries[ i ].rotation.z = t / 20000;
 					cones[ i ].rotation.x = Math.sin( t / 21000 ) * Math.PI / 3 - Math.PI / 2;
 					cones[ i ].rotation.z = t / 20000;
-
 				}
-
 			}
-
 			renderer.render( scene, camera );
-
 		} );
-
 	} );
 
 	// Converts a point [longitude, latitude] in degrees to a THREE.Vector3.
@@ -176,8 +156,10 @@ function globe() {
 }
 
 function anim() {
+	const stats = Stats();
 
 	let containerGui = document.getElementById( 'guiPanel2' );
+	containerGui.appendChild( stats.dom );
 	const gui = new GUI( { container: containerGui, width: 250 } );
 
 	const settings = {
@@ -187,8 +169,6 @@ function anim() {
 	gui.add( settings, 'distortion', 0.2, 2.5, 0.5 );
 
 	var container, renderer, scene, camera, mesh, mesh2, material, material2, fov = 20;
-
-	const stats = Stats();
 
 	var width = window.innerWidth;
 	var height = window.innerHeight;
@@ -203,7 +183,7 @@ function anim() {
   	scene = new THREE.Scene();
 
   	camera = new THREE.PerspectiveCamera( fov, width / height, 1, 10000 );
-  	camera.position.z = 75;
+  	camera.position.z = 95;
     camera.position.x = 55;
   	camera.target = new THREE.Vector3( 0, 0, 0 );
 
@@ -253,7 +233,6 @@ function anim() {
   	renderer.autoClear = false;
 
   	container.appendChild( renderer.domElement );
-		containerGui.appendChild( stats.dom );
 
   	var controls = new OrbitControls( camera, renderer.domElement );
 		controls.enableZoom = false;

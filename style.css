@@ -8,6 +8,18 @@
     background: transparent;
 }
 
+.lil-gui {
+  	--background-color: #f6f6f6;
+  	--text-color: #3d3d3d;
+  	--title-background-color: #efefef;
+  	--title-text-color: #3d3d3d;
+  	--widget-color: #eaeaea;
+  	--hover-color: #f0f0f0;
+  	--focus-color: #fafafa;
+  	--number-color: #07aacf;
+  	--string-color: #8da300;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -15,7 +27,7 @@
 }
 
 html{
-  font-size: 4px;
+  font-size: 3px;
   font-family: 'Source Sans Pro Extra-light 200', sans-serif;
   color: black;
   overflow-x: hidden;
@@ -26,15 +38,6 @@ html{
 body{
   width: 100%;
   height: 100%;
-}
-
-section{
-  /* padding-top: 5rem; */
-  /* padding-bottom: 20rem; */
-}
-
-section .about{
-  margin-bottom: 150rem;
 }
 
 a{
@@ -53,46 +56,7 @@ img{
   width: 100%;
   opacity: 1;
 }
-
-.all{
-  /* height: 100vh; */
-  /* overflow-x: hidden; */
-  /* background-color: rgba(25, 25, 25, 1); */
-  /* margin: 5rem; */
-}
 /*End global*/
-
-/*Start reusable*/
-.container{
-  height: 100%;
-  margin: 7rem;
-  position: relative;
-}
-
-.section-heading{
-  margin-left: 7rem;
-  padding-top: 10rem;
-  /* left: 100px; */
-}
-
-.section-heading h1{
-  text-align: left;
-  letter-spacing: 0.8rem;
-  font-size: 9rem;
-  font-family: "Source Sans Pro";
-  font-style: italic;
-  font-weight: 400;
-  line-height: 11rem;
-  color: black;
-}
-
-.section-heading h6{
-  font-size: 4rem;
-  font-weight: 300;
-  position: relative;
-  margin-bottom: 6rem;
-}
-/*End reusable*/
 
 /*Start header*/
 header{
@@ -205,14 +169,13 @@ li{
   left: 16rem;
   padding-left: 5rem;
   padding-right: 5rem;
-  padding-bottom: 1rem;
   text-align: left;
-  display: inline-block;
+  display: inline-flex;
 }
 
 .sloganText h1{
   font-family: 'Source Sans Pro';
-  font-size: 4.5rem;
+  font-size: 5.5rem;
   font-weight: 400;
   color: black;
 }
@@ -247,20 +210,18 @@ li{
 }
 
 .ticker-wrap {
-  bottom: -0.1rem;
   position: absolute;
   width: 300%;
   overflow: hidden;
-  height: 6rem;
-  left: 39rem;
+  height: 8rem;
+  left: 44rem;
   box-sizing: content-box;
 }
 .ticker-wrap .ticker {
-  display: inline-block;
-  height: 4rem;
-  line-height: 4rem;
+  display: inline-flex;
+  height: 6rem;
+  line-height: 7rem;
   white-space: nowrap;
-    /* padding-right: 100%; */
   box-sizing: content-box;
 
   -webkit-animation-iteration-count: infinite;
@@ -275,9 +236,9 @@ li{
 .ticker-wrap .ticker__item {
   display: inline-block;
   padding-bottom: 1.5rem;
-  margin-left: 6rem;
+  margin-left: 10rem;
   font-family: 'Source Sans Pro';
-  font-size: 4.5rem;
+  font-size: 5.5rem;
   font-weight: 200;
   color: #1956F0;
   text-transform: lowercase;
@@ -302,31 +263,39 @@ li{
   font-weight: 400;
   transform: scale(1,1);
   user-select: none;
-  font-style: italic;
-  text-transform: lowercase;
 }
 
 .landing-slogan1{
   float: right;
   margin-top: 15rem;
-  padding-right: 35rem;
-  margin-bottom: 70rem;
+  padding-right: 32rem;
+  margin-bottom: 10rem;
   width: 35%;
   text-align: right;
   cursor: crosshair;
 }
 
 .landing-slogan1 h1{
+  margin-bottom: 10rem;
+}
+
+.landing-slogan1 h6{
+  text-transform: lowercase;
+  position: relative;
+  font-family: 'Source Sans Pro';
+  font-size: 5.5rem;
+  font-weight: 300;
+  margin: 3rem;
 }
 
 #guiPanel2{
   position: absolute;
   z-index: 1;
-  right: 35rem;
-  bottom: 36rem;
+  right: 30rem;
+  bottom: 10rem;
   margin: 2rem;
   padding: 2rem;
-  display: block;
+  display: inline-flex;
 }
 
 #my_dataviz{
@@ -343,7 +312,7 @@ li{
   width: 100%;
   text-align: right;
   margin-bottom: 5rem;
-  padding-right: 35rem;
+  padding-right: 33rem;
   padding-bottom: 20rem;
   /* display: inline-block; */
 }
@@ -351,7 +320,7 @@ li{
 .aboutme h6{
   position: relative;
   font-family: 'Source Sans Pro';
-  font-size: 6.6rem;
+  font-size: 5.5rem;
   font-weight: 300;
   color: #1956F0;
   font-style: italic;
@@ -361,7 +330,7 @@ li{
   text-align: right;
   float: right;
   padding-right: 1rem;
-  margin-left: 25rem;
+  margin-left: 15rem;
   overflow: hidden;
 }
 
@@ -388,18 +357,19 @@ li{
   position: relative;
   margin: 3rem;
   padding-top: 20rem;
-  margin-bottom: 30rem;
+  margin-bottom: 50rem;
 }
 
 .landing-image h1{
   font-family: 'Source Sans Pro';
-  font-size: 4rem;
+  font-size: 5.5rem;
   font-weight: 200;
   color: black;
-  text-align: right;
+  text-align: left;
   margin-top: 1rem;
   font-weight: 400;
   width: 26%;
+  margin-left: 6rem;
 
 }
 
@@ -411,38 +381,45 @@ li{
 /*End Landing Text */
 
 /*Start about*/
+.globecontainer{
+  height: 100%;
+  margin: 7rem;
+  position: relative;
+  display: block;
+}
+
 .sketchWords{
   position: relative;
+  margin: 4rem;
+  display: block;
 }
 
 #guiPanel{
-  top: 150rem;
+  left: 5rem;
+  top: 200rem;
   position: absolute;
+  z-index: 10;
 }
 
 #container{
-  display: inline-block;
+  display: block;
   float: right;
   position: relative;
+  margin-bottom: 40rem;
+  z-index: 10;
 }
 
 .graphDesc{
   display: inline-flex;
   position: absolute;
-  /* right: 0; */
-  /* top: 0; */
-  left: 80rem;
+  left: 109rem;
   float: right;
-  width: 45%;
-  column-count: 1;
-  /* column-gap: 20rem; */
-  /* margin: 10rem; */
-  /* padding: 10rem; */
+  width: 43%;
 }
 
 .graphDesc h1{
   font-family: 'Source Sans Pro';
-  font-size: 4rem;
+  font-size: 5.5rem;
   font-weight: 200;
   color: black;
   text-align: right;
@@ -450,260 +427,188 @@ li{
   font-weight: 400;
   width: 45%;
 }
-
-.about-heading{
-  margin: 10rem;
-  padding: 10rem;
-  top: 10rem;
-  width: 44%;
-  text-transform: lowercase;
-  z-index: 1;
-  position: relative;
-  display: inline-block;
-}
-
-.about-heading h1{
-  letter-spacing: 0.3rem;
-  font-size: 9rem;
-  font-family: 'Glory';
-  font-style: italic;
-  font-weight: 400;
-  line-height: 10rem;
-  transform: scale(1, 1);
-  -webkit-text-fill-color: black /*rgb(242,242,242)*/
-  text-align: right;
-  padding-bottom: 10rem;
-}
 /*End about*/
 
-/*Start D3*/
-
-.portfolio-details{
-  display: inline-flex;
-  position: relative;
-  float: left;
-  width: 80%;
-  margin-left: 5rem;
-  /* column-count: 1; */
-  /* column-gap: 20rem; */
-}
-
-.portfolio-details p{
-  font-family: 'Source Sans Pro';
-  font-weight: 300;
-  font-size: 5rem;
-  line-height: 7rem;
-  justify-content: space-between;
-  /* text-align: justify; */
-
-}
-
-.portfolioSelect{
-  display: flex;
-  padding: 20rem;
-  margin: auto;
-  width: 99%;
-}
-
-.portfolioSelect input{
-  padding: 1rem;
-  background: none;
-  border: none;
-  font-family: 'Source Sans Pro';
-  transform: scale(1, 0.9);
-  font-size: 6rem;
-  font-weight: 400;
-  color: black;
-  text-transform: uppercase;
-}
-
-.portfolioSelect input:hover{
-  background: rgba(216,216,216,0.9);
-  color: #1956F0;
-}
-
-#graph{
-  padding: 2rem;
-  margin: 2rem;
+.separator{
   width: 100%;
+  display: block;
+  margin: 10rem;
+}
+
+/*Start Portfolio*/
+.portfolioGrid{
+  margin: 10rem;
+  width: 95%;
+  display: block;
   position: relative;
 }
 
-.portfolioGrid{
-  padding: 4rem;
+.image-gallery{
+  background-color: rgba(200,200,200,0.3);xw
+  margin-top: 20rem;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-gap: 5rem;
+  grid-gap: 10rem;
   grid-template-areas:
-                        'img-1 img-1 img-2 img-2'
-                        'img-1 img-1 img-2 img-2'
-                        'img-1 img-1 img-3 img-4'
-                        'img-5 img-5 img-5 img-5'
-                        'img-5 img-5 img-5 img-5'
-                        'img-6 img-7 img-7 img-7'
-                        'img-6 img-7 img-7 img-7'
+                        /* 'item-1 item-1 item-2 item-3'
+                        'item-1 item-1 item-4 item-5'
+                        'item-6 item-7 item-10 item-10'
+                        'item-8 item-9 item-10 item-10'
+                        'item-11 item-11 item-12 item-13'
+                        'item-11 item-11 item-14 item-15'
+                        'item-16 item-16 item-17 item-17'
+                        'item-16 item-16 item-17 item-17' */
+                        'item-1 item-1 item-2 item-2'
+                        'item-1 item-1 item-2 item-2'
+                        'item-3 item-3 item-4 item-5'
+                        'item-3 item-3 item-6 item-7'
+                        'item-8 item-9 item-10 item-10'
+                        'item-11 item-12 item-10 item-10'
+                        'item-13 item-13 item-14 item-14'
+                        'item-13 item-13 item-14 item-14'
+                        'item-15 item-16 item-17 item-17'
+                        'item-15 item-16 item-17 item-17'
 }
 
-.image-gallery h1{
+.image-gallery a{
   width: 100%;
-  height: 50rem;
-  font-size: 6rem;
-  background-position: center
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: rgba(255,255,255,1);
+}
+
+.item-1{
+  grid-area: item-1;
+  min-height: 100rem;
+}
+.item-2{
+  grid-area: item-2;
+  min-height: 100rem;
+}
+.item-3{
+  grid-area: item-3;
+  min-height: 100rem;
+}
+.item-4{
+  grid-area: item-4;
+  max-height: 50rem;
+}
+.item-5{
+  grid-area: item-5;
+  min-height: 50rem;
+}
+.item-6{
+  grid-area: item-6;
+  min-height: 50rem;
+}
+.item-7{
+  grid-area: item-7;
+  min-height: 50rem;
+}
+.item-8{
+  grid-area: item-8;
+  min-height: 50rem;
+}
+.item-9{
+  grid-area: item-9;
+  min-height: 50rem;
+}
+.item-10{
+  grid-area: item-10;
+  min-height: 100rem;
+}
+.item-11{
+  grid-area: item-11;
+  min-height: 50rem;
+}
+.item-12{
+  grid-area: item-12;
+  min-height: 50rem;
+}
+.item-13{
+  grid-area: item-13;
+  min-height: 100rem;
+}
+.item-14{
+  grid-area: item-14;
+  min-height: 100rem;
+}
+.item-15{
+  grid-area: item-15;
+  min-height: 100rem;
+}
+.item-16{
+  grid-area: item-16;
+  min-height: 100rem;
+}
+
+.item-17{
+  grid-area: item-17;
+  min-height: 100rem;
+}
+
+#l{
+  max-height: 100rem;
+}
+
+#s{
+  max-height: 50rem;
+}
+
+#m{
+  max-height: 100rem;
+  max-width: 50rem;
+}
+
+.img-G{
+  margin: 2rem;
+  object-fit: contain;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
 }
 
-.img-1{
-  grid-area: img-1;
-  min-height: 70rem;
-  background-image: url("Pages/Index/AIDHR.png");
+.description{
+  margin: auto;
+  margin-top: 4rem;
+  margin-left: 8rem;
+  /* padding: 10rem; */
 }
 
-.img-2{
-  grid-area: img-2;
-  min-height: 70rem;
-  background-image: url("Pages/Index/AIDHR.png");
-}
-
-.img-3{
-  grid-area: img-3;
-  min-height: 70rem;
-  background-image: url("Pages/Index/AIDHR.png");
-}
-
-.img-4{
-  grid-area: img-4;
-  min-height: 70rem;
-  background-image: url("Pages/Index/AIDHR.png");
-}
-
-.img-5{
-  grid-area: img-5;
-  min-height: 70rem;
-  background-image: url("Pages/Index/AIDHR.png");
-}
-
-.img-6{
-  grid-area: img-6;
-  min-height: 70rem;
-  background-image: url("Pages/Index/AIDHR.png");
-}
-
-.img-7{
-  grid-area: img-7;
-  min-height: 70rem;
-  background-image: url("Pages/Index/AIDHR.png");
-}
-
-/*Start portfolio*/
-
-.portfolio{
-  width: 100%;
-}
-
-.portfolio-item{
-  text-transform: lowercase;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5rem;
-  width: 80%;
-  padding: 10rem;
-  top: 10rem;
-}
-
-.portfolio-item1{
-  text-transform: lowercase;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5rem;
-  width: 80%;
-  padding: 10rem;
-  top: 10rem;
-}
-
-.portfolio-item:last-child{
-  margin-bottom: 0;
-}
-
-.portfolio-img{
-  flex: 1;
-}
-
-.portfolio-description{
-  flex: 1;
-}
-
-.portfolio-description h1{
+.description h1{
+  display: block;
+  position: relative;
+  letter-spacing: 0.3rem;
+  font-size: 8rem;
   font-family: 'Source Sans Pro';
-  font-size: 4rem;
-  font-weight: 200;
-  margin: 1rem 0;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 10rem;
+  transform: scale(1, 1);
+  -webkit-text-fill-color: black;
 }
 
-.portfolio-description h6{
-  font-size: 9rem;
-  text-transform: lowercase;
-  font-family: 'Source Sans Pro';
-  font-weight: 400;
-  opacity: 1;
-}
+.description h6{
 
-.portfolio-description .cta{
-  display: inline-block;
-  margin-top: 3rem;
-  font-size: 4rem;
-  font-weight: 200;
-  text-transform: lowercase;
-  color: rgb(205,114,127);
-  transition: color 300ms;
 }
-
-.portfolio-description .cta1{
-  display: inline-block;
-  margin-top: 3rem;
-  font-size: 4rem;
-  font-weight: 200;
-  text-transform: lowercase;
-  color: #1956F0;
-  transition: color 300ms;
-}
-
-.portfolio-description .cta:hover{
-  color: rgb(235,100,100);
-}
-/*End portfolio*/
+/* end portfolio */
 
 /*Start contact*/
 .contact{
+  margin-top: 30rem;
+  margin-left: 10rem;
   /* background-color: #449DD1; */
 }
 
-.p5sketch{
-}
-
-.p5zone{
-  position: relative;
-  display: flex;
-  top: 0rem;
-  left: 70%;
-}
-
-.p5zone h1{
-  letter-spacing: 0.1rem;
-  font-size: 4rem;
-  font-family: 'Source Sans Pro';
+.contact-heading h1{
+  color: black;
+  margin-left: 10rem;
+  line-height: 22rem;
+  font-size: 17rem;
+  letter-spacing: 0.9rem;
+  font-family: 'Glory';
   font-weight: 400;
-  line-height: 1rem;
-  transform: scale(1, 0.9);
-  /* -webkit-text-stroke-width: .1rem; */
-  /* -webkit-text-stroke-color: #000; */
-  -webkit-text-fill-color: black;
-  text-transform: uppercase;
+  transform: scale(1,1);
+  user-select: none;
 }
 
 form{
@@ -712,7 +617,7 @@ form{
 }
 
 form label{
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 input,
@@ -725,7 +630,7 @@ textarea{
   outline-color: #449DD1;
   font-family: 'Source Sans Pro';
   color: black;
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 200;
 }
 
@@ -831,9 +736,7 @@ input[type="submit"]:hover{
   .about-heading h1{
     font-size: 15rem;
   }
-  .section-heading h1{
-    font-size: 4rem;
-  }
+
   .about-details .nav-list{
     flex-direction: initial;
   }
@@ -923,9 +826,7 @@ input[type="submit"]:hover{
       margin: 0;
       order: 2;
     }
-    .section-heading h1{
-      font-size: 6rem;
-    }
+
     form{
       width: 90%;
     }

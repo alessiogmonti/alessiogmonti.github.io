@@ -1,0 +1,178 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 3px;
+  font-family: 'Source Sans Pro Extra-light 200', sans-serif;
+  color: black;
+  overflow-x: hidden;
+  cursor: crosshair;
+  /* background-color: black; */
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+a{
+  text-decoration: none;
+  color: #eee;
+}
+
+p{
+  font-size: 7rem;
+  font-weight: 300;
+  color: #black;
+  widows: 3;
+}
+
+.content{
+  position: relative;
+}
+
+section{
+  position: absolute;
+  display: inline-block;
+  width: 50%;
+}
+
+#main{
+  width: 100vh;
+  height: 100vh;
+  z-index: -1;
+  position: absolute;
+}
+
+.contact{
+  margin-top: 30rem;
+  width: 45%;
+}
+
+.contact-heading h1{
+  margin-left: 10rem;
+  line-height: 22rem;
+  font-size: 17rem;
+  letter-spacing: 0.9rem;
+  font-family: 'Glory';
+  font-weight: 400;
+  transform: scale(1,1);
+  user-select: none;
+}
+
+form{
+  width: 100%;
+  margin: 7rem;
+}
+
+form label{
+  font-size: 7rem;
+}
+
+input,
+select{
+  width: 50%;
+  padding: 1rem;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  outline-color: #449DD1;
+  font-family: 'Source Sans Pro';
+  color: black;
+  font-size: 7rem;
+  font-weight: 200;
+}
+
+select{
+  width: 100%;
+}
+
+textarea{
+  height: 80rem;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  outline-color: #449DD1;
+  font-family: 'Source Sans Pro';
+  color: black;
+  font-size: 7rem;
+  font-weight: 200;
+}
+
+input[type="submit"]{
+  width: 40%;
+  margin-top: 5rem;
+  width: initial;
+  background-color: black;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 300ms;
+}
+
+input[type="submit"]:hover{
+  background-color: #1956F0;
+  color: #eee;
+}
+/*End contact*/
+
+/*Start footer*/
+.copyright{
+  width: 100%;
+  text-align: center;
+  /* background-color: #16162d; */
+  padding: 2rem 0;
+  position: relative;
+}
+
+.up{
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background-color: #ffff;
+  /* bottom: 1rem; */
+  left: 5rem;
+  border-radius: 100%;
+  display: block;
+}
+
+.up i{
+  color: #1956F0;
+  font-size: 2rem;
+  margin: auto;
+  cursor: pointer;
+}
+
+.up a{
+  color: #1956F0;
+  font-size: 2rem;
+  margin: auto;
+  cursor: pointer;
+}
+
+.material-icons-outlined {
+  transform: rotate(-90deg);
+  font-family: 'Material Icons';
+  font-weight: 200;
+  font-style: normal;
+  font-size: 28px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  cursor: pointer;
+  animation: pulse 3s infinite;
+  padding-top: -1rem;
+}
+
+.copyright p{
+  font-size: 1.5rem;
+}
