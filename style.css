@@ -10,14 +10,14 @@
 
 .lil-gui {
   	--background-color: #f6f6f6;
-  	--text-color: #3d3d3d;
+  	--text-color: #032add;
   	--title-background-color: #efefef;
-  	--title-text-color: #3d3d3d;
+  	--title-text-color: #032add;
   	--widget-color: #eaeaea;
-  	--hover-color: #f0f0f0;
+  	--hover-color: #f0f0;
   	--focus-color: #fafafa;
-  	--number-color: #07aacf;
-  	--string-color: #8da300;
+  	--number-color: #032add;
+  	--string-color: #032add;
 }
 
 *{
@@ -92,8 +92,8 @@ li{
 .nav-link{
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 4.5rem;
-  font-weight: 300;
-  color: #1956F0;
+  font-weight: 400;
+  color: #032add;
   background-color: rgb(255,255,255);
 }
 
@@ -132,7 +132,7 @@ li{
 }
 
 .bar{
-  background: radial-gradient(#FFF, #1956F0);
+  background: radial-gradient(#FFF, #032add);
   width: 50%;
   height: 2.5px;
   border-radius: 0.5rem;
@@ -239,8 +239,8 @@ li{
   margin-left: 10rem;
   font-family: 'Source Sans Pro';
   font-size: 5.5rem;
-  font-weight: 200;
-  color: #1956F0;
+  font-weight: 400;
+  color: #032add;
   text-transform: lowercase;
   background-color: rgba(255,255,255,0.9);
   font-style: italic;
@@ -284,7 +284,7 @@ li{
   position: relative;
   font-family: 'Source Sans Pro';
   font-size: 5.5rem;
-  font-weight: 300;
+  font-weight: 400;
   margin: 3rem;
 }
 
@@ -304,6 +304,7 @@ li{
   text-align: right;
   z-index: 0;
   display: inline-block;
+  width: 100%;
 }
 
 .aboutme{
@@ -321,8 +322,8 @@ li{
   position: relative;
   font-family: 'Source Sans Pro';
   font-size: 5.5rem;
-  font-weight: 300;
-  color: #1956F0;
+  font-weight: 400;
+  color: #032add;
   font-style: italic;
 }
 
@@ -341,7 +342,7 @@ li{
 	left: 0;
 	width: 100%;
 	height: 0.5rem;
-	background-color: #1956F0;
+	background-color: #032add;
 	/* opacity 1; */
 	transition: opacity 300ms, transform 300ms;
   transform: translate3d(-100%, 0, 0);
@@ -351,6 +352,12 @@ li{
 .aboutme a h6:focus::after{
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+
+.landing-text{
+  position: relative;
+  display: inline-flex;
+  width: 100%;
 }
 
 .landing-image{
@@ -363,27 +370,39 @@ li{
 .landing-image h1{
   font-family: 'Source Sans Pro';
   font-size: 5.5rem;
-  font-weight: 200;
+  font-weight: 400;
   color: black;
   text-align: left;
   margin-top: 1rem;
   font-weight: 400;
   width: 26%;
   margin-left: 6rem;
+}
 
+.thebutton{
+  position: absolute;
+  top: 6rem;
+  right: 10rem;
+  background-color: white; /* Green */
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  font-size: 8rem;
 }
 
 .landing-image img{
   position: relative;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 /*End Landing Text */
 
 /*Start about*/
 .globecontainer{
   height: 100%;
-  margin: 7rem;
+  margin: 2rem;
   position: relative;
   display: block;
 }
@@ -395,10 +414,11 @@ li{
 }
 
 #guiPanel{
-  left: 5rem;
+  left: 2rem;
   top: 200rem;
-  position: absolute;
-  z-index: 10;
+  position: relative;
+  display: inline-block;
+  z-index: 3;
 }
 
 #container{
@@ -406,15 +426,15 @@ li{
   float: right;
   position: relative;
   margin-bottom: 40rem;
-  z-index: 10;
+  z-index: 2;
 }
 
 .graphDesc{
   display: inline-flex;
   position: absolute;
-  left: 109rem;
+  left: 65rem;
   float: right;
-  width: 43%;
+  width: 40%;
 }
 
 .graphDesc h1{
@@ -429,37 +449,25 @@ li{
 }
 /*End about*/
 
-.separator{
-  width: 100%;
-  display: block;
-  margin: 10rem;
-}
-
 /*Start Portfolio*/
 .portfolioGrid{
+  padding: 1rem;
   margin: 10rem;
   width: 95%;
-  display: block;
+  display: inline-block;
   position: relative;
 }
 
 .image-gallery{
-  background-color: rgba(200,200,200,0.3);xw
+  background-color: white;
   margin-top: 20rem;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-gap: 10rem;
+  grid-row-gap: 20rem;
+  grid-gap: 20rem;
   grid-template-areas:
-                        /* 'item-1 item-1 item-2 item-3'
-                        'item-1 item-1 item-4 item-5'
-                        'item-6 item-7 item-10 item-10'
-                        'item-8 item-9 item-10 item-10'
-                        'item-11 item-11 item-12 item-13'
-                        'item-11 item-11 item-14 item-15'
-                        'item-16 item-16 item-17 item-17'
-                        'item-16 item-16 item-17 item-17' */
                         'item-1 item-1 item-2 item-2'
                         'item-1 item-1 item-2 item-2'
                         'item-3 item-3 item-4 item-5'
@@ -469,96 +477,126 @@ li{
                         'item-13 item-13 item-14 item-14'
                         'item-13 item-13 item-14 item-14'
                         'item-15 item-16 item-17 item-17'
-                        'item-15 item-16 item-17 item-17'
+                        'item-18 item-19 item-17 item-17'
+                        'item-20 item-20 item-20 item-20'
+                        'item-20 item-20 item-20 item-20'
+                        'item-20 item-20 item-20 item-20'
 }
 
 .image-gallery a{
   width: 100%;
-  background-color: rgba(255,255,255,1);
+  /* background-color: rgba(255,255,255,1); */
+}
+
+.description h6{
+  font-size: 5.5rem;
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  color: black;
+  font-style: italic;
+}
+
+.description h1{
+  display: block;
+  position: relative;
+  letter-spacing: 0.3rem;
+  font-size: 8rem;
+  font-family: 'Glory';
+  font-style: italic;
+  font-weight: 400;
+  line-height: 10rem;
+  transform: scale(1, 1);
+  -webkit-text-fill-color: black;
 }
 
 .item-1{
   grid-area: item-1;
-  min-height: 100rem;
 }
 .item-2{
   grid-area: item-2;
-  min-height: 100rem;
 }
 .item-3{
   grid-area: item-3;
-  min-height: 100rem;
 }
 .item-4{
   grid-area: item-4;
-  max-height: 50rem;
 }
 .item-5{
   grid-area: item-5;
-  min-height: 50rem;
 }
 .item-6{
   grid-area: item-6;
-  min-height: 50rem;
 }
 .item-7{
   grid-area: item-7;
-  min-height: 50rem;
 }
 .item-8{
   grid-area: item-8;
-  min-height: 50rem;
 }
 .item-9{
   grid-area: item-9;
-  min-height: 50rem;
 }
 .item-10{
   grid-area: item-10;
-  min-height: 100rem;
 }
 .item-11{
   grid-area: item-11;
-  min-height: 50rem;
 }
 .item-12{
   grid-area: item-12;
-  min-height: 50rem;
 }
 .item-13{
   grid-area: item-13;
-  min-height: 100rem;
 }
 .item-14{
   grid-area: item-14;
-  min-height: 100rem;
 }
 .item-15{
   grid-area: item-15;
-  min-height: 100rem;
 }
 .item-16{
   grid-area: item-16;
-  min-height: 100rem;
 }
-
 .item-17{
   grid-area: item-17;
+}
+.item-18{
+  grid-area: item-18;
+}
+.item-19{
+  grid-area: item-19;
+}
+.item-20{
+  grid-area: item-20;
+  background-color: rgba(248, 248, 248,1);
+}
+/* .item-21{
+  grid-area: item-21;
   min-height: 100rem;
+} */
+#xl{
+  max-height: 200rem;
+  min-height: 200rem;
 }
 
 #l{
   max-height: 100rem;
+  min-height: 100rem;
 }
 
 #s{
   max-height: 50rem;
+  min-height: 50rem;
 }
 
+#s1{
+  text-align: center;
+}
+/*
 #m{
   max-height: 100rem;
   max-width: 50rem;
-}
+} */
 
 .img-G{
   margin: 2rem;
@@ -573,80 +611,156 @@ li{
   margin-left: 8rem;
   /* padding: 10rem; */
 }
-
-.description h1{
-  display: block;
-  position: relative;
-  letter-spacing: 0.3rem;
-  font-size: 8rem;
-  font-family: 'Source Sans Pro';
-  font-style: italic;
-  font-weight: 300;
-  line-height: 10rem;
-  transform: scale(1, 1);
-  -webkit-text-fill-color: black;
-}
-
-.description h6{
-
-}
 /* end portfolio */
 
 /*Start contact*/
 .contact{
-  margin-top: 30rem;
-  margin-left: 10rem;
-  /* background-color: #449DD1; */
+  padding: 10rem;
+  padding-top: 40rem;
 }
 
-.contact-heading h1{
-  color: black;
-  margin-left: 10rem;
-  line-height: 22rem;
-  font-size: 17rem;
-  letter-spacing: 0.9rem;
+.contact h6{
   font-family: 'Glory';
+  font-size: 5.5rem;
   font-weight: 400;
-  transform: scale(1,1);
-  user-select: none;
-}
-
-form{
-  width: 50%;
-  margin: 7rem;
-}
-
-form label{
-  font-size: 6rem;
-}
-
-input,
-select,
-textarea{
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 5px;
-  border: 1px solid black;
-  outline-color: #449DD1;
-  font-family: 'Source Sans Pro';
   color: black;
-  font-size: 5rem;
-  font-weight: 200;
 }
 
-input[type="submit"]{
-  width: initial;
-  background-color: black;
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 1rem;
-  cursor: pointer;
-  transition: background-color 300ms;
+.contact a{
+  font-family: 'Source Sans Pro';
+  font-size: 5.5rem;
+  font-weight: 400;
+  color: #032add;
 }
 
-input[type="submit"]:hover{
-  background-color: #1956F0;
-  color: #eee;
+.contact-grid{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 10rem;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+  display: grid;
+  grid-template-columns: .5fr 1.25fr 1.25fr;
+  grid-template-rows: auto;
+  grid-gap: 50rem;
+  grid-row-gap: 30rem;
+  grid-template-areas:
+                      'link1 link3 link4'
+                      'link2 link5 link6'
+}
+
+.about-link{
+  grid-area: link1;
+  padding-top: 3rem;
+  border-top: 1px solid black;
+
+}
+
+.contact-link{
+  grid-area: link2;
+  padding-top: 3rem;
+  border-top: 1px solid black;
+}
+
+.showcase-link{
+  grid-area: link3;
+  display: grid;
+  grid-template-columns: 0.25fr 1.75fr;
+  grid-template-rows: auto;
+  grid-gap: 10rem;
+  grid-row-gap: 5rem;
+  grid-template-areas:
+                        'sublink1 sublink2'
+                        'sublink3 sublink4'
+                        'sublink5 sublink6'
+                        'sublink7 sublink8'
+                        'sublink9 sublink10'
+                        'sublink11 sublink12';
+  text-align: right;
+}
+
+.interactive-link{
+  height: 1%;
+  grid-area: link4;
+  display: grid;
+  grid-template-columns: 0.25fr 1.75fr;
+  grid-template-rows: auto;
+  grid-row-gap: 1rem;
+  grid-gap: 1rem;
+  text-align: right;
+  grid-template-areas:
+                        'int1 int2'
+                        'int3 int4'
+}
+
+.github-link{
+  grid-area: link5;
+  display: grid;
+  grid-template-columns: 0.25fr 1.75fr;
+  grid-template-rows: auto;
+  grid-gap: 10rem;
+  grid-row-gap: 5rem;
+  text-align: right;
+  grid-template-areas:
+                        'git1 git2'
+                        'git3 git4';
+}
+
+.showcase{
+  grid-area: sublink1;
+  padding: 3rem;
+  border-right: 1px solid black;
+}
+
+.showcase-1{
+  grid-area: sublink2;
+}
+.showcase-2{
+  grid-area: sublink4;
+}
+.showcase-3{
+  grid-area: sublink6;
+}
+.showcase-4{
+  grid-area: sublink8;
+}
+.showcase-5{
+  grid-area: sublink10;
+}
+.showcase-6{
+  grid-area: sublink12;
+}
+
+#interactive{
+  grid-area: int1;
+  padding: 3rem;
+  border-right: 1px solid black;
+}
+
+#interactive-1{
+  grid-area: int2;
+}
+
+#interactive-2{
+  grid-area: int4;
+}
+
+#github{
+  grid-area: git1;
+  padding: 3rem;
+  border-right: 1px solid black;
+}
+
+#github-1{
+  grid-area: git2;
+}
+
+#github-2{
+  grid-area: git4;
+}
+
+.navlinks h6{
+  color: #032add;
 }
 /*End contact*/
 
@@ -671,7 +785,7 @@ input[type="submit"]:hover{
 }
 
 .up i{
-  color: #1956F0;
+  color: #032add;
   font-size: 2rem;
   margin: auto;
   cursor: pointer;
@@ -695,7 +809,7 @@ input[type="submit"]:hover{
 }
 
 .copyright p{
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 /*End footer*/
 
@@ -715,6 +829,9 @@ input[type="submit"]:hover{
 
 /*Start media queries*/
 @media screen and (max-width: 768px){
+  html{
+    font-size: 2px;
+  }
   body{
     width: 100%;
     height: 100%;
@@ -762,6 +879,9 @@ input[type="submit"]:hover{
 }
 
 @media screen and (max-width: 600px){
+  html{
+    font-size: 1px;
+  }
     .menu-toggler{
       top: 2rem;
       right: 2rem;
@@ -803,33 +923,6 @@ input[type="submit"]:hover{
     }
     .about-details p{
       font-size: 3.5rem;
-    }
-    .profile-img{
-      margin: 0 0 7rem 0;
-    }
-    .portfolio{
-      padding-left: 0rem;
-    }
-    .portfolio-description h1{
-      font-size: 3.5rem;
-    }
-    .portfolio-description h6{
-      font-size: 6rem;
-    }
-    .portfolio-item{
-      flex-direction: column;
-    }
-    .portfolio-img{
-      margin: 0 0 2rem 0;
-    }
-    .portfolio-description{
-      margin: 0;
-      order: 2;
-    }
-
-    form{
-      width: 90%;
-    }
     .up{
       right: 2rem;
     }

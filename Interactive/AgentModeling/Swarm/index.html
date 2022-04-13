@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Particle Swarm Visualization</title>
+  </head>
+  <body>
+    <div class="graphText">
+      <div class = "bar">
+        <div class="title">
+          <div class="material-icons-outlined">
+            <a href="../../../">
+              arrow_circle_up
+            </a>
+          </div>
+          <h1> Particle Swarm Optimization</h1>
+        </div>
+        <div class = 'subtitle'>
+          <h6> for hyper-parameter tuning</h6>
+        </div>
+      </div>
+      <!-- <div class="num"> -->
+        <!-- <span class="dig1" id="dig1">0 </span>
+        <span class="dig2" id="dig2"> 1</span>
+      </div> -->
+      <div id='container' class="container">
+        <div class='sketch' id='sketch'> </div>
+        <div id='sections'>
+          <div class="description">
+            <p> An <span style = "color:#6496de" > evolutionary algorithm </span>
+              searches for the <span style = "color:#6496de" > global optima </span> of a multi-parameter problem.
+            </p>
+            <p> A common use for this algorithm is the optimization of Machine Learning (ML) model hyper-parameters.
+              These are the settings that the drive the learning rate and accuracy of the model.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class='secondDesc'>
+        <div class="image">
+          <img src='SwarmDesc.png'>
+        </div>
+        <div id='sections'>
+          <div class='description2' id='second'>
+            <p> In search of the optimal configuration, particles in the swarm travel the parameter space. </p>
+            <p> The best configuration has the highest accuracy and lowest training time- these are the values used to calculate the particle's fitness. </p>
+            <p>
+              At the end of every iteration, the particles with the highest fitness pass on their configuration to the
+              next swarm. Values from these configurations are randomly mixed with each other, and there is a small probability that new parameter
+              values replace some of them.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="https://d3js.org/d3.v6.js"></script> -->
+    <!-- <script src='graph-scroll.js'></script> -->
+    <!-- <script >
+    let gs = d3.graphScroll()
+        .container(d3.select('#sketch'))
+        // .graph(d3.selectAll('.container #graph'))
+        .eventId('uniqueId1')  // namespace for scroll and resize events
+        .sections(d3.selectAll('.container #sections > div'))
+        // .offset(innerWidth < 900 ? innerHeight - 30 : 200)
+        .on('active', function(i){
+          document.getElementById("dig2").textContent=i+1;
+          data2get[i].then(init);
+          // chart.setColors(colors[i])
+        });
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+    <script src = "quicksettings.js"></script>
+    <script src = "p5gui.js"></script>
+    <script src = "sketch.js"></script>
+  </body>
+</html>

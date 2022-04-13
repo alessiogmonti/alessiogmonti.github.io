@@ -43,9 +43,9 @@
         <div class="ticker-wrap">
           <div class="ticker">
             <div class="ticker__item">Forecasting household energy usage with seasonality trends and weather analysis</div>
-            <div class="ticker__item">Particle swarm evolutionary pathfinding</div>
+            <div class="ticker__item">Particle swarm evolutionary optimization</div>
             <div class="ticker__item">Identifying socioeconomic clusters according to grocery purchases</div>
-            <div class="ticker__item">Autonomus agent simulation: seek, chase, evade</div>
+            <div class="ticker__item">Autonomus agent simulation</div>
             <div class="ticker__item">Visualizing cryptocurrency trends with technical analyses</div>
           </div>
         </div>
@@ -67,8 +67,12 @@
       </div>
     </div>
     <div class="landing-image" id="landingimage">
-      <img src="teslaKDE.png" alt="">
-      <h1>The max increase & decrease in price for each week is a measure of volatility.</h1>
+      <img class="myslide" src="/Pages/Index/PortfolioImages/teslaKDE.png" alt="">
+      <img class="myslide" src="/Pages/Index/PortfolioImages/kdeExp.png" alt="">
+      <div class="landing-text">
+        <h1>The max increase & decrease in price for each week is a measure of volatility.</h1>
+        <button class="thebutton" onclick="plusDivs(+1)">&#10095;</button>
+      </div>
     </div>
     <div class="globecontainer">
       <div class="sketchWords">
@@ -79,85 +83,128 @@
         <div id="container"></div>
       </div>
     </div>
-    <div class="separator"></div>
     <div class="portfolioGrid">
       <div class="image-gallery">
-        <a href="/p5/GE/index.html" class="item-1">
-          <img src="GE.png" class="img-G" id="l"></img>
-         <div class="description"> <h1> Visualizing stock market data in D3.js <br> This interactive object-oriented chart that serves as a template for time-series displays.</h1> </div>
+        <a href="/Interactive/AgentModeling/Swarm/index.html" class="item-1">
+          <img src="/Pages/Index/PortfolioImages/SwarmDesc.png" class="img-G" id="l"></img>
+         <div class="description"> <h1> Particle Swarm Optimization </h1> <h6> Visualizing a popular optimization algorithm. </h6> </div>
         </a>
-        <a href="githublinkgoeshere" class="item-2">
-          <img src="seek.png" class="img-G" id="l"></img>
-         <div class="description"> <h1> Simulating behavior. <br> Two agents interact to create a generative artwork.</h1> </div>
+        <a href="/Interactive/AgentModeling/Seek/seek.html" class="item-2">
+          <img src="/Pages/Index/PortfolioImages/HuntSeek.png" class="img-G" id="l"></img>
+         <div class="description"> <h1> Hunter Seeker: Agent Modeling </h1> <h6> Two physics-based agents interact to create a generative artwork.</h6> </div>
         </a>
-        <a href="githublinkgoeshere" class="item-3">
-          <img src="d3stockchart.png" class="img-G" id="l"></img>
-         <div class="description"> <h1> Web-ready interactive charts.</h1> </div>
+        <a href="/Interactive/D3OOPCharts/chart1" class="item-3">
+          <img src="/Pages/Index/PortfolioImages/d3chart.png" class="img-G" id="l"></img>
+         <div class="description"> <h1> Visualizing stock market data in D3.js </h1> <h6> This object-oriented chart is a template for displaying time-series data. </h6> </div>
         </a>
         <a href="/SlideshowImages/ML/bbands.png" class="item-4">
-          <img src="incomeage.png" class="img-G" id="s"></img>
-         <div class="description"> <h1> Client demographics </h1> </div>
+          <img src="/Pages/Index/PortfolioImages/incomeage.png" class="img-G" id="s"></img>
+         <div class="description" id="s1"> <h6> Demographic analysis </h6> </div>
         </a>
         <a href="/SlideshowImages/ML/bbands.png" class="item-5">
-          <img src="tslawheel.png" class="img-G" id="s"></img>
-         <div class="description"> <h1> this is a description </h1> </div>
+          <img src="/Pages/Index/PortfolioImages/kmeans.png" class="img-G" id="s"></img>
+         <div class="description" id="s1"> <h6> K-means clustering </h6> </div>
         </a>
         <a href="/SlideshowImages/ML/bbands.png" class="item-6">
-          <img src="ugaImproved.png" class="img-G" id="s"></img>
-         <div class="description"> <h1> this is a description </h1> </div>
+          <img src="/Pages/Index/PortfolioImages/ugaImproved.png" class="img-G" id="s"></img>
+         <div class="description" id="s1"> <h6> Satellite imagery enhanced data </h6> </div>
         </a>
         <a href="/SlideshowImages/ML/bbands.png" class="item-7">
-          <img src="ghSphere.jpg" class="img-G" id="s"></img>
-         <div class="description"> <h1> this is a description </h1> </div>
+          <img src="/Pages/Index/PortfolioImages/ghSphere.jpg" class="img-G" id="s"></img>
+         <div class="description" id="s1"> <h6> Data-driven graphics </h6> </div>
         </a>
         <a href="/SlideshowImages/ML/bbands.png" class="item-8">
-          <img src="beaData.png" class="img-G" id="s"></img>
-         <div class="description"> <h1> Bureau of Economic Analysis Dataset API</h1> </div>
+          <img src="/Pages/Index/PortfolioImages/beaData.png" class="img-G" id="s"></img>
+         <div class="description" id="s1"> <h6> Bureau of Economic Analysis API</h6> </div>
         </a>
         <a href="/SlideshowImages/ML/bbands.png" class="item-9">
-          <img src="techind.png" class="img-G" id="s"></img>
-         <div class="description"> <h1> Forecasting price movements. </h1> </div>
+          <img src="/Pages/Index/PortfolioImages/techind.png" class="img-G" id="s"></img>
+         <div class="description" id="s1"> <h6> Forecasting price movements </h6> </div>
         </a>
         <a href="/SlideshowImages/ML/bbands.png" class="item-10">
-          <img src="gsCloseUp.jpg" class="img-G" id="l"></img>
-         <div class="description"> <h1> Illustration of Grid Search optimization.  <br> Algorithmic operations are communicated with intuitive graphics.</h1> </div>
+          <img src="/Pages/Index/PortfolioImages/gsCloseUp.jpg" class="img-G" id="l"></img>
+         <div class="description"> <h1> Illustration of Grid Search optimization </h1> <h6> Algorithmic operations are communicated with intuitive graphics.</h6> </div>
         </a>
         <a href="/SlideshowImages/ML/bbands.png" class="item-11">
-          <img src="umapMBenz.png" class="img-G" id="s"></img>
-         <div class="description"> <h1> Dimensionality reduction. </h1></div>
+          <img src="/Pages/Index/PortfolioImages/umapMBenz.png" class="img-G" id="s"></img>
+         <div class="description" id="s1"> <h6> Dimensionality reduction </h6></div>
         </a>
         <a href="/SlideshowImages/ML/bbands.png" class="item-12">
-          <img src="partisanlean.png" class="img-G" id="s"></img>
-         <div class="description"> <h1> House of Representatives Partisanship </h1> </div>
+          <img src="/Pages/Index/PortfolioImages/partisanlean.png" class="img-G" id="s"></img>
+         <div class="description" id="s1"> <h6> House of Representatives Partisanship (Votes over time)</h6> </div>
         </a>
         <a href="/SlideshowImages/ML/bbands.png" class="item-13">
-          <img src="SlideshowImages/ML/bbands.png" class="img-G" id="l"></img>
-         <div class="description"> <h1> this is a description </h1> </div>
+          <img src="/Pages/Index/PortfolioImages/astar.png" class="img-G" id="l"></img>
+         <div class="description"> <h1> A graphic implementation of A-star, </h1> <h6> a popular pathfinding algorithm. </h6> </div>
         </a>
         <a href="/SlideshowImages/ML/bbands.png" class="item-14">
-          <img src="bullwheelF.png" class="img-G" id="l"></img>
-         <div class="description"> <h1> Photorealistic renders and VFX. </h1> </div>
+          <img src="/Pages/Index/PortfolioImages/bullwheelF.png" class="img-G" id="l"></img>
+         <div class="description"> <h1> Photorealistic renders and CGI videos </h1> <h6> for product marketing and concept realization. </h6> </div>
         </a>
         <a href="/SlideshowImages/ML/bbands.png" class="item-15">
-          <img src="SlideshowImages/ML/bbands.png" class="img-G" id="m"></img>
-         <div class="description"> <h1> this is a description </h1> </div>
+          <img src="/Pages/Index/PortfolioImages/bbands.png" class="img-G" id="s"></img>
+         <div class="description" id="s1"> <h6> Technical analysis of stock prices. </h6> </div>
         </a>
         <a href="/SlideshowImages/ML/bbands.png" class="item-16">
-          <img src="SlideshowImages/ML/bbands.png" class="img-G" id="m"></img>
-         <div class="description"> <h1> this is a description </h1> </div>
+          <img src="/Pages/Index/PortfolioImages/bbands.png" class="img-G" id="s"></img>
+         <div class="description" id="s1"> <h6> Technical analysis of stock prices. </h6> </div>
         </a>
         <a href="/SlideshowImages/ML/bbands.png" class="item-17">
-          <img src="tslawheel.png" class="img-G" id="l"></img>
-         <div class="description"> <h1> Structural Optimization of a 3D model. </h1> </div>
+          <img src="/Pages/Index/PortfolioImages/tslawheel.png" class="img-G" id="l"></img>
+         <div class="description"> <h1> Structural Optimization of a 3D model </h1> <h6> Algorithmic optimization maintans tensile strength and maximizes ligthness. </h6> </div>
         </a>
+        <a href="/SlideshowImages/ML/bbands.png" class="item-18">
+          <img src="/Pages/Index/PortfolioImages/bbands.png" class="img-G" id="s"></img>
+         <div class="description" id="s1"> <h6> Technical analysis of stock prices. </h6> </div>
+        </a>
+        <a href="/SlideshowImages/ML/bbands.png" class="item-19">
+          <img src="/Pages/Index/PortfolioImages/bbands.png" class="img-G" id="s"></img>
+         <div class="description" id="s1"> <h6> Technical analysis of stock prices. </h6> </div>
+        </a>
+        <a href="/SlideshowImages/ML/bbands.png" class="item-20">
+          <img src="/Pages/Index/PortfolioImages/draco.png" class="img-G" id="xl"></img>
+         <div class="description"> <h1> 3D Graphic art.</h1> </div>
+        </a>
+        <!-- <a href="/SlideshowImages/ML/bbands.png" class="item-21">
+          <img src="ultra.jpg" class="img-G" id="l"></img>
+         <div class="description"> <h1> 3D Graphic art. </h1> </div>
+        </a> -->
       </div>
     </div>
     <div class='contact'>
-      <div class="contact-heading">
-        <a href="/Pages/Contact/contact.html"> <h1> Contact Me <h1> </a>
-      </div>
-    </div>
+      <div class="contact-grid">
+        <a href="githb.com/alessiogmonti" class='about-link'>
+          <div class='navlinks'> <h6>  About  </h6> </div>
+        </a>
 
+        <a href="githb.com/alessiogmonti" class='contact-link'>
+          <div class='navlinks'> <h6> Contact  </h6> </div>
+        </a>
+
+        <div class='showcase-link'>
+          <div class='showcase'> <h6> Showcases </h6> </div>
+          <li class='showcase-1'><a href="/Interactive/AgentModeling/Swarm/index.html">Particle Swarm Optimization</a></li>
+          <li class='showcase-2'><a href="/Interactive/AgentModeling/Seek/seek.html">Agent Based Models</a></li>
+          <li class='showcase-3'><a href='github.com/alessiogmonti'>Algorithmically Designed Graphics</a></li>
+          <li class='showcase-4'><a href='github.com/alessiogmonti'>Graphics Gallery</a></li>
+          <li class='showcase-5'><a href='github.com/alessiogmonti'>CGI & Product renders</a></li>
+          <li class='showcase-6'><a href='github.com/alessiogmonti'>Structural Optimization of 3D models</a></li>
+        </div>
+
+        <div class='interactive-link'>
+          <div class='links' id='interactive'> <h6> Interactive <br> & Visual</h6> </div>
+          <li class='subgrid_links' id='interactive-1'><a href="/Interactive/D3OOPCharts/chart1">D3 Stock Charts</a></li>
+          <li class='subgrid_links' id='interactive-2'><a href='github.com/alessiogmonti'>A-Star algorithm visualization</a></li>
+        </div>
+
+        <div class='github-link'>
+          <div class='links' id='github'> <h6> Github </h6> </div>
+          <li class='subgrid_links' id='github-1'><a href='github.com/alessiogmonti'>Technical Analysis of stock prices</a></li>
+          <li class='subgrid_links' id='github-2'><a href='github.com/alessiogmonti'>Forecasting energy consumption with autoregressive moving averages </a></li>
+        </div>
+
+        </div>
+    </div>
     <footer class="copyright">
       <div class="up" id="up">
           <span class="material-icons-outlined">
