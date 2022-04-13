@@ -149,7 +149,7 @@ li{
 .landing-text{
   padding: 10rem;
   position: relative;
-  top: 18%;
+  top: 6%;
   left: 7rem;
   width: 100%;
   text-align: left;
@@ -175,7 +175,7 @@ li{
 }
 
 .home{
-  bottom: 2%;
+  top: 2%;
   position: fixed;
   left: 15rem;
   width: 100%;
@@ -226,8 +226,8 @@ li{
 .about-details{
   position: absolute;
   top: 15%;
-  left: 42%;
-  width: 40%;
+  left: 32%;
+  width: 65%;
   height: 100%;
   column-count: 1;
   column-gap: 11rem;
