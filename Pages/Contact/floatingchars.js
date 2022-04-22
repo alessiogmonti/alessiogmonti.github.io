@@ -98,7 +98,7 @@ import { TWEEN } from 'https://unpkg.com/three@0.127.0/examples/jsm/libs/tween.m
 
 
     // canvasのスタイルを設定 (グリッドのサイズの80%をfontSizeとする)
-    this.txtCanvasCtx.font = 'normal ' + (this.textureGridSize * 1.3) + 'px ' + fontFamily;
+    this.txtCanvasCtx.font = 'normal ' + (this.textureGridSize * 1.2) + 'px ' + fontFamily;
 
     // グリッドの中心に描画
     this.txtCanvasCtx.textAlign = 'center';

@@ -56,29 +56,46 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";
 }
 
-$('.contact1-form').on('submit',function(e){
-        //optional validation code here
+let elements = document.querySelectorAll('#animate')
+for (let i = 0; i < elements.length; i++) {
+  let x = elements[i].querySelectorAll('.img-G')
+  let index = 0;
+  carousel(index, x);
+}
 
-        e.preventDefault();
+function carousel(index, x) {
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  index++;
+  if (index > x.length) {index = 1}
+  x[index-1].style.display = "block";
+  setTimeout(function(){carousel(index,x)}, 2000); // Change image every 1 seconds
+}
 
-        $.ajax({
-            url: "https://script.google.com/macros/s/AKfycbzmGoq7kwKLNdxk_c5nm0Rx4BOGdxBOa2NFoKsp6F_ZY5C4UDT7VYCX9T9NonO2ic-pOw/exec",
-            method: "POST",
-            dataType: "json",
-            data: $(".contact1-form").serialize(),
-            success: function(response) {
-
-                if(response.result == "success") {
-                    $('.contact1-form')[0].reset();
-                    alert('Message sent, thank you!');
-                    return true;
-                }
-                else {
-                    alert("Something went wrong. Please try again.")
-                }
-            },
-            error: function() {
-                alert("Looks like something's broken! Please email me at alessiomonti97@gmail.com while I figure out how to fix")
-            }
-        })
-    });
+// $('.contact1-form').on('submit',function(e){
+//         //optional validation code here
+//
+//         e.preventDefault();
+//
+//         $.ajax({
+//             url: "https://script.google.com/macros/s/AKfycbzmGoq7kwKLNdxk_c5nm0Rx4BOGdxBOa2NFoKsp6F_ZY5C4UDT7VYCX9T9NonO2ic-pOw/exec",
+//             method: "POST",
+//             dataType: "json",
+//             data: $(".contact1-form").serialize(),
+//             success: function(response) {
+//
+//                 if(response.result == "success") {
+//                     $('.contact1-form')[0].reset();
+//                     alert('Message sent, thank you!');
+//                     return true;
+//                 }
+//                 else {
+//                     alert("Something went wrong. Please try again.")
+//                 }
+//             },
+//             error: function() {
+//                 alert("Looks like something's broken! Please email me at alessiomonti97@gmail.com while I figure out how to fix")
+//             }
+//         })
+//     });

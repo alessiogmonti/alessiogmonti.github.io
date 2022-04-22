@@ -127,7 +127,7 @@ import { TWEEN } from 'https://unpkg.com/three@0.127.0/examples/jsm/libs/tween.m
           // self.floatingChars.createTxtTexture('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=[]{}|:;?<>,.', self.fontFamily);
           // self.floatingChars.createTxtTexture('MYNAMEISALESSIOMONTIANDIAMADESIGNER.ICREATEINTERACTIVEDATA-DRIVENINFORMATIONSYSTEMS.', self.fontFamily);
           // self.floatingChars.createTxtTexture('LOVEU!', self.fontFamily);
-          self.floatingChars.createTxtTexture('THANK U!', self.fontFamily);
+          self.floatingChars.createTxtTexture('TALK SOON!', self.fontFamily);
 
 
           // シーンに追加

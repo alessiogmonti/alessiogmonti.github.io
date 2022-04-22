@@ -21,7 +21,7 @@
         <div class="contact-heading">
           <h1>Contact Me</h1>
         </div>
-        <form class="contact1-form" method="POST">
+        <form class="contact1-form" method="post" action="https://forms.un-static.com/forms/afad6165359179b5bfebe3b79378414576fc8ba9">
           <label for="name"></label>
           <input type="text" id="name" name="name" placeholder="Enter your name..." required>
           <label for="email"></label>
@@ -50,8 +50,8 @@
       <p>&copy; 2022 Alessio Monti <p>
       </footer>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="/Pages/main.js"></script>
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+      <!-- <script src="/Pages/main.js"></script> -->
       <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -130,7 +130,7 @@
 
         // 距離から透明度を計算
         float getAlpha(float distance) {
-          float da = abs(distance - 400.0) / 500.0;
+          float da = abs(distance - 100.0) / 500.0;
           return clamp(1.0 - da, 0.0, 1.0);
         }
 
@@ -169,13 +169,13 @@
           // 8個のリング状
           //
 
-          float numRings = 16.0;  // リングの個数
+          float numRings = 20.0;  // リングの個数
           float ringIndex = mod(charIndex, numRings);  // どのリングに属するか
-          float numCharsPerRing = numChars / numRings;  // リングごとの文字数
+          float numCharsPerRing = (numChars / numRings) /2.0;  // リングごとの文字数
 
           // 4段階にリングの位置を設定
           pos.x += animationValue2 * map(ringIndex, 0.0, numRings - 1.0, -180.0, 180.0, true);
-          pos.y += animationValue2 * radius * 2.0;  // まず手前にradius分移動
+          pos.y += animationValue2 * radius * 1.7;  // まず手前にradius分移動
 
           // y軸を中心にリング状になるように文字を配置
           theta = getRad(3.0, PI * 7.0 / numCharsPerRing * mod((charIndex - ringIndex) / numRings, numCharsPerRing));
@@ -190,12 +190,12 @@
             // リングごとの文字数
 
           // 4段階にリングの位置を設定
-          pos.x += animationValue3 * map(ringIndex, 0.0, numRings - 1.0, -100.0, 360.0, true);
-          pos.y += animationValue3 * radius;  // まず手前にradius分移動
+          pos.x += animationValue3 * map(ringIndex, 0.0, numRings, -180.0, 360.0, true);
+          pos.y += animationValue3 * radius ;  // まず手前にradius分移動
 
           // y軸を中心にリング状になるように文字を配置
           // theta = getRad(2.0, PI * 2.0 / numCharsPerRing * mod((charIndex - ringIndex) / numRings, numCharsPerRing));
-          theta = getRad(2.0, PI * randomValues.z * 10.0);
+          theta = getRad(1.0, PI * randomValues.z * 10.0);
           pos = rotateVec3(pos, animationValue3 * theta, vec3(10.0, 10.0, 10.0));
 
           // pos.z += animationValue3 * radius;
@@ -253,9 +253,9 @@
           // 距離に応じてalphaの値が変化
           vColor = vec4(hsv2rgb(
             vec3(
-              (sin(getRad(2.0, randomValues.x * 2.0)) + 1.0) * 0.5,
-              0.8,
-              0.8
+              (sin(getRad(2.0, randomValues.x * 2.0)) + 5.0) * 0.5,
+              2.0,
+              0.9
             )
           ), getAlpha(d));
         }

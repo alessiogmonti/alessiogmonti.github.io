@@ -317,21 +317,22 @@ function globe() {
 
 		var container, renderer, scene, camera, mesh, mesh2, material, material2, fov = 20;
 
-		var width = window.innerWidth;
-		var height = window.innerHeight;
+		var width = window.innerWidth/1.1;
+		var height = window.innerHeight/1.1;
 		var start = Date.now();
 
 		window.addEventListener( 'load', init );
 
 		function init() {
 
-			container = document.getElementById( 'my_dataviz' );
+			container = document.querySelector( '.my_dataviz' );
 
 			scene = new THREE.Scene();
 
 			camera = new THREE.PerspectiveCamera( fov, width / height, 1, 1000 );
-			camera.position.z = 95;
-			camera.position.x = 55;
+			camera.position.z = 65;
+			camera.position.x = 100;
+			camera.position.y = -10;
 			camera.target = new THREE.Vector3( 0, 0, 0 );
 
 			scene.add( camera );
@@ -391,7 +392,7 @@ function globe() {
 
 		function onWindowResize() {
 
-			renderer.setSize( window.innerWidth, window.innerHeight );
+			renderer.setSize( window.innerWidth/1.2, window.innerHeight/1.2 );
 			camera.aspect = width / height;
 			camera.updateProjectionMatrix();
 

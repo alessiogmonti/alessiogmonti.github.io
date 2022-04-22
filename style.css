@@ -38,6 +38,7 @@ html{
 body{
   width: 100%;
   height: 100%;
+  margin: auto;
 }
 
 a{
@@ -298,13 +299,11 @@ li{
   display: inline-flex;
 }
 
-#my_dataviz{
+.my_dataviz{
   position: absolute;
-  left: 2rem;
-  text-align: right;
-  z-index: 0;
-  display: inline-block;
-  width: 100%;
+  display: block;
+  width: 100vw;
+  height: 100vh;
 }
 
 .aboutme{
@@ -314,7 +313,7 @@ li{
   text-align: right;
   margin-bottom: 5rem;
   padding-right: 33rem;
-  padding-bottom: 20rem;
+  /* padding-bottom: 20rem; */
   /* display: inline-block; */
 }
 
@@ -357,7 +356,14 @@ li{
 .landing-text{
   position: relative;
   display: inline-flex;
-  width: 100%;
+  width: 98%;
+  /* border: 1px solid black; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-right: 5rem;
+  margin-left: 5rem;
 }
 
 .landing-image{
@@ -381,8 +387,8 @@ li{
 
 .thebutton{
   position: absolute;
-  top: 6rem;
-  right: 10rem;
+  top: 4rem;
+  right: 6rem;
   background-color: white; /* Green */
   border: none;
   color: black;
@@ -399,9 +405,8 @@ li{
 }
 /*End Landing Text */
 
-/*Start about*/
 .globecontainer{
-  height: 100%;
+  height: 100vh;
   margin: 2rem;
   position: relative;
   display: block;
@@ -411,6 +416,7 @@ li{
   position: relative;
   margin: 4rem;
   display: block;
+  /* border: 1px solid black; */
 }
 
 #guiPanel{
@@ -450,28 +456,33 @@ li{
 /*End about*/
 
 /*Start Portfolio*/
+
 .portfolioGrid{
   padding: 1rem;
   margin: 10rem;
   width: 95%;
-  display: inline-block;
+  display: block;
   position: relative;
 }
 
 .image-gallery{
+  /* border-left: 1px solid black; */
+  border-top: 1px solid black;
+  padding-top: 5rem;
+  padding-left: 5rem;
   background-color: white;
   margin-top: 20rem;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-row-gap: 20rem;
+  grid-row-gap: 10rem;
   grid-gap: 20rem;
   grid-template-areas:
                         'item-1 item-1 item-2 item-2'
                         'item-1 item-1 item-2 item-2'
-                        'item-3 item-3 item-4 item-5'
-                        'item-3 item-3 item-6 item-7'
+                        'item-3 item-3 item-4 item-4'
+                        'item-3 item-3 item-4 item-4'
                         'item-8 item-9 item-10 item-10'
                         'item-11 item-12 item-10 item-10'
                         'item-13 item-13 item-14 item-14'
@@ -485,7 +496,7 @@ li{
 
 .image-gallery a{
   width: 100%;
-  /* background-color: rgba(255,255,255,1); */
+  /* background-color: rgba(255,255,255,1); changed 4,5,6, */
 }
 
 .description h6{
@@ -568,7 +579,9 @@ li{
 }
 .item-20{
   grid-area: item-20;
-  background-color: rgba(248, 248, 248,1);
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  /* background-color: rgba(255, 255, 255,1); */
 }
 /* .item-21{
   grid-area: item-21;
@@ -599,7 +612,7 @@ li{
 } */
 
 .img-G{
-  margin: 2rem;
+  margin: 1rem;
   object-fit: contain;
   position: relative;
   display: block;
@@ -836,94 +849,81 @@ li{
     width: 100%;
     height: 100%;
   }
-  /* .landing-text h1{
-    font-size: 15rem;
-  }
-  .nav-list{
-    flex-direction: column;
-  }
-
-  li{
-    margin: 2rem 0;
-  }
-
-  .nav-link{
-    font-size: 4.5rem;
-  }
-  .about-heading h1{
-    font-size: 15rem;
-  }
-
-  .about-details .nav-list{
-    flex-direction: initial;
-  }
-  .about-details li{
-    margin: 0 2rem;
-  }
-  .icon-container{
-    width: 7rem;
-    height: 7rem;
-  }
-  .icon-container i{
-    font-size: 4rem;
-  } */
-  /* .timeline ul{
-    margin: 0 0 0 auto;
-  }
-  .timeline .date:before{
-    left: -20rem;
-  }
-  .timeline .date:after{
-    left: -5.9rem;
-  } */
 }
 
 @media screen and (max-width: 600px){
   html{
     font-size: 2px;
+    width: 100vw;
   }
-    .menu-toggler{
-      top: 2rem;
-      right: 2rem;
-    }
-    .landing-text{
-    }
-    .landing-text h1{
-      font-size: 8rem;
-    }
-    .slogan h1{
-      font-size: 3.5rem;
-    }
-    .landing-text h6{
-      font-size: 3.5rem;
-    }
-    .nav-link{
-      font-size: 3.5rem;
-    }
-    .about-heading{
-      position: absolute;
-      bottom: 73%;
-      width: 90%;
-      left: 3rem;
+  body{
+    width: 100vw;
+    margin: auto;
+  }
+  .menu-toggler{
+    display: none;
+  }
+  .top-nav{
+    display: none;
+  }
+  .landing{
+    font-size: 8rem;
+    width: 100%;
+  }
+  .landing-slogan1{
+    width: 90%;
+  }
+  .landing-slogan1 h6{
+    font-size: 10rem;
+  }
+  .aboutme h6{
+    font-size: 9rem;
+  }
+  /* .landing-text h1{
+    font-size: 8rem;
+  } */
+  .slogan{
+    display: none;
+  }
+  .landing-text h6{
+    font-size: 9rem;
+  }
+  .nav-link{
+    font-size: 3.5rem;
+  }
+  .about-heading{
+    position: absolute;
+    bottom: 73%;
+    width: 90%;
+    left: 3rem;
 
-    }
-    .about-heading h1{
-      letter-spacing: 0.2rem;
-      font-size: 6rem;
-      line-height: 6rem;
-    }
-    .about-details{
-      padding-top: 50rem;
-      column-count: 1;
-      position: static;
-      padding-left: 5rem;
-      width: 93%;
-      column-gap: 3rem;
-      margin-bottom: 10rem;
-    }
-    .about-details p{
-      font-size: 3.5rem;
-    .up{
-      right: 2rem;
-    }
+  }
+  .about-heading h1{
+    letter-spacing: 0.2rem;
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+  .about-details{
+    padding-top: 50rem;
+    column-count: 1;
+    position: static;
+    padding-left: 5rem;
+    width: 93%;
+    column-gap: 3rem;
+    margin-bottom: 10rem;
+  }
+  .about-details p{
+    font-size: 3.5rem;
+  .up{
+    right: 2rem;
+  }
+
+  #guiPanel{
+    display: block;
+  }
+
+  .portfolioGrid{
+    width: 100vw;
+  }
+
 }
