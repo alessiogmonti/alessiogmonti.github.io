@@ -38,6 +38,10 @@ $(document).ready(function (){
 
 document.head.appendChild(Object.assign(document.createElement("link"), {rel: "icon", href: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.6em' x='0' font-size='120'>\uD83D\uDF1B</text></svg>"}))
 
+$.getJSON("https://api.countapi.xyz/hit/alessiogmonti.github.io/visits", function(response) {
+    $("#visits").text(response.value);
+});
+
 var slideIndex = 1;
 showDivs(slideIndex);
 
