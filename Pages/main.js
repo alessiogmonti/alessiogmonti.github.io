@@ -28,12 +28,6 @@ $(document).ready(function (){
       scrollTop: 0
     }, 500);
   });
-
-  AOS.init({
-    easing: 'ease',
-    duration: 1800,
-    once: true
-  });
 });
 
 document.head.appendChild(Object.assign(document.createElement("link"), {rel: "icon", href: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.6em' x='0' font-size='120'>\uD83D\uDF1B</text></svg>"}))

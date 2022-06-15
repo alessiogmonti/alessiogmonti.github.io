@@ -11,6 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script type="importmap">
+    {
+      "imports":{
+        "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js",
+        "trackballcontrols": "https://unpkg.com/three@0.128.0/examples/jsm/controls/TrackballControls.js"
+      }
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -212,17 +220,17 @@
       <p>&copy; 2022 Alessio Monti <p>
     </footer>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="Pages/main.js"></script>
-      <!-- <script src="https://d3js.org/d3.v6.js"></script>
-      <script src="plot.js"></script>
-      <script src="https://unpkg.com/topojson-client@3"></script>
-      <script src="https://unpkg.com/d3-array@1"></script>
-      <script src="https://unpkg.com/d3-collection@1"></script>
-      <script src="https://unpkg.com/d3-dispatch@1"></script>
-      <script src="https://unpkg.com/d3-request@1"></script>
-      <script src="https://unpkg.com/d3-timer@1"></script> -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.4.4/d3.min.js"></script>
-      <script type="module" src="twoThrees.js"></script>
-    </body>
-    </html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./Pages/main.js"></script>
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <!-- <script src="plot.js"></script>-->
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <script src="https://unpkg.com/d3-array@1"></script>
+    <script src="https://unpkg.com/d3-collection@1"></script>
+    <script src="https://unpkg.com/d3-dispatch@1"></script>
+    <script src="https://unpkg.com/d3-request@1"></script>
+    <script src="https://unpkg.com/d3-timer@1"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.4.4/d3.min.js"></script> -->
+    <script type="module" src="./twoThrees.js"></script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
-import * as THREE from "https://unpkg.com/three@0.127.0/build/three.module.js";
-import { TrackballControls } from "https://unpkg.com/three@0.127.0/examples/jsm/controls/TrackballControls.js";
+import * as THREE from "three";
+import { TrackballControls } from "trackballcontrols"
 import Stats from "./Pages/Index/stats.js";
 import { GUI } from 'https://cdn.jsdelivr.net/npm/lil-gui@0.16/+esm';
 
@@ -114,10 +114,8 @@ function globe() {
 		const wiymesh = new THREE.Mesh( wiy, wiymaterial );
 		scene.add(wiymesh);
 
-
-
 		d3.json( "./Pages/Index/dataFranceModified.json", function ( error, topology ) {
-
+			console.log("loaded")
 			if ( error ) throw error;
 			var countries = [];
 			var cones = [];
@@ -158,7 +156,6 @@ function globe() {
 			cones[ 16 ].position.x += 50;
 			cones[ 16 ].position.z -= 15;
 			cones[ 16 ].position.y -= 35;
-			console.log(cones[16].position);
 
 			let guiobj = { loadGDP: function () {
 				for ( var i = 0; i < countries.length; i ++ ) {
@@ -392,7 +389,7 @@ function globe() {
 
 		function onWindowResize() {
 
-			renderer.setSize( window.innerWidth/1.2, window.innerHeight/1.2 );
+			renderer.setSize( window.innerWidth/1.1, window.innerHeight/1.1 );
 			camera.aspect = width / height;
 			camera.updateProjectionMatrix();
 
